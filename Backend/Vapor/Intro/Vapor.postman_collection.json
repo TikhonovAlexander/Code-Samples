@@ -33,6 +33,36 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "acronyms",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"short\" : \"OMG\",\n\t\"long\" : \"Oh My God\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/acronyms",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"acronyms"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
