@@ -1,10 +1,10 @@
 # SafeArea
 
 ## SafeArea portrait
-![](safe port.png)
+![safePort](safePort.png)
 ## Margins portrait
-![](margins port.png)
+![marginsPort](marginsPort.png)
 ## SafeArea landscape
-![](safe land.png)
+![safeLand](safeLand.png)
 ## Margins landscape
-![](margins land.png)
+![marginsLand](marginsLand.png)
