@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  Intrinsic Content Size
+//  Content Hugging And Compression Resistance
 //
-//  Created by Aleksandr Tikhonov on 14.03.19.
-//  Copyright © 2019 tikhonov. All rights reserved.
+//  Created by atikhonov on 14.03.19.
+//  Copyright © 2019 atikhonov. All rights reserved.
 //
 
 import UIKit

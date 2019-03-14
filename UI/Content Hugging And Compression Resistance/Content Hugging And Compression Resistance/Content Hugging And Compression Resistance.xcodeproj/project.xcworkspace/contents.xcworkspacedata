@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Intrinsic Content Size.xcodeproj">
+      location = "self:Content Hugging And Compression Resistance.xcodeproj">
    </FileRef>
 </Workspace>
