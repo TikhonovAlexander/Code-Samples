@@ -19,3 +19,7 @@ These tell the layout engine how strongly a view resists stretching beyond its n
 When the layout engine needs to stretch a view to fill a space it chooses the one with the lowest Content-Hugging priority. If there’s not one view and only one view with the lowest priority the layout is ambiguous.
 
 ![ContentHugging](ContentHugging.png)
+
+## Default values
+
+![Defaults](Defaults.png)
