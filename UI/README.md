@@ -18,3 +18,14 @@ A phrase like **as close as possible** suggests an **optional** constraint.
 - If you want some extra padding inside the safe area create your constraints to the margins of the superview.
 - Use the directional layout margins for right-to-left language support.
 - You can change the margins of the root view.
+
+
+- Activating, changing or deactivating constraints doesn’t directly update the frames of views. Instead, it updates the layout engine model and schedules a layout pass that runs later on the application run loop.
+- There are two layout passes over the view hierarchy. The first pass allows you to update the constraints. The second pass updates the view layout by changing the size and position of views to match values from the layout engine model.
+- Call setNeedsLayout to manually schedule an update layout pass. Call layoutIfNeeded to force an immediate update to the view frames from the model.
+- You rarely need to use updateConstraints or its view controller companion updateViewConstraints. The system calls these methods frequently, so they are not the best choice to do your initial constraint setup. Use them when changing constraints in place is too slow.
+- If you’re not using Interface Builder to create your constraints try to create them once when creating your views. If you need to change your constraints at runtime, prefer to activate and deactivate constraints over adding and removing constraints.
+- To animate constraint changes call layoutIfNeeded inside a view animation block.
+- Override layoutSubviews to create more dynamic layouts.
+- The layout engine uses the alignment rectangle not the view frame
+when positioning views.
