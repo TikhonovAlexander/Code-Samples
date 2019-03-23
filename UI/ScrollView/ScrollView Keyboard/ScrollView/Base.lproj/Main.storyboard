@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVs-yx-Asc" customClass="AdaptiveScrollView" customModule="ScrollView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfQ-rZ-5GL" userLabel="Content Container">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="861"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Ready Ready Ready Ready Ready Ready Ready Ready Ready Ready Ready Ready Ready " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faS-8s-Rvr">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="468"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-t0-i64">
+                                                <rect key="frame" x="0.0" y="776" width="375" height="65"/>
+                                                <color key="backgroundColor" red="0.34558008670000001" green="1" blue="0.37480039640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                                <state key="normal" title="START">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skater" translatesAutoresizingMaskIntoConstraints="NO" id="3KO-dy-JXa">
+                                                <rect key="frame" x="0.0" y="476" width="375" height="300"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="3KO-dy-JXa" firstAttribute="top" secondItem="faS-8s-Rvr" secondAttribute="bottom" constant="8" symbolic="YES" id="2PV-Mw-YYq"/>
+                                            <constraint firstItem="MBg-t0-i64" firstAttribute="leading" secondItem="CfQ-rZ-5GL" secondAttribute="leading" id="5Tl-mL-tUB"/>
+                                            <constraint firstItem="faS-8s-Rvr" firstAttribute="leading" secondItem="CfQ-rZ-5GL" secondAttribute="leading" id="6AM-gr-OAu"/>
+                                            <constraint firstItem="faS-8s-Rvr" firstAttribute="top" secondItem="CfQ-rZ-5GL" secondAttribute="top" id="AB8-IO-Inv"/>
+                                            <constraint firstItem="3KO-dy-JXa" firstAttribute="leading" secondItem="CfQ-rZ-5GL" secondAttribute="leading" id="Yq1-Ci-bQy"/>
+                                            <constraint firstAttribute="trailing" secondItem="MBg-t0-i64" secondAttribute="trailing" id="gtd-li-ceP"/>
+                                            <constraint firstItem="MBg-t0-i64" firstAttribute="top" secondItem="3KO-dy-JXa" secondAttribute="bottom" id="ioh-PS-Oxm"/>
+                                            <constraint firstAttribute="trailing" secondItem="faS-8s-Rvr" secondAttribute="trailing" id="r6Z-1v-Web"/>
+                                            <constraint firstAttribute="trailing" secondItem="3KO-dy-JXa" secondAttribute="trailing" id="w8Z-af-Rf5"/>
+                                            <constraint firstAttribute="bottom" secondItem="MBg-t0-i64" secondAttribute="bottom" constant="20" symbolic="YES" id="zZr-YJ-E7g"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CfQ-rZ-5GL" firstAttribute="leading" secondItem="GVs-yx-Asc" secondAttribute="leading" id="4La-Ve-G91"/>
+                                    <constraint firstAttribute="bottom" secondItem="CfQ-rZ-5GL" secondAttribute="bottom" id="9ar-26-xJj"/>
+                                    <constraint firstAttribute="trailing" secondItem="CfQ-rZ-5GL" secondAttribute="trailing" id="LEi-eX-Rii"/>
+                                    <constraint firstItem="CfQ-rZ-5GL" firstAttribute="width" secondItem="GVs-yx-Asc" secondAttribute="width" id="nRA-2x-ymB"/>
+                                    <constraint firstItem="CfQ-rZ-5GL" firstAttribute="top" secondItem="GVs-yx-Asc" secondAttribute="top" id="tcG-ml-bGP"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92999052240000002" blue="0.30170241419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GVs-yx-Asc" secondAttribute="bottom" id="3Gk-hc-paD"/>
+                            <constraint firstItem="GVs-yx-Asc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W4m-bk-aJw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GVs-yx-Asc" secondAttribute="trailing" id="iga-lU-fCE"/>
+                            <constraint firstItem="GVs-yx-Asc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lav-qm-nb8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="skater" width="300" height="300"/>
+    </resources>
+</document>
