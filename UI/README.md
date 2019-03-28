@@ -29,3 +29,36 @@ A phrase like **as close as possible** suggests an **optional** constraint.
 - Override layoutSubviews to create more dynamic layouts.
 - The layout engine uses the alignment rectangle not the view frame
 when positioning views.
+
+
+# Layout Essentials
+
+## The View Hierarchy
+
+![ViewHierarchy](ViewHierarchy.png)
+
+## Screen (UIScreen)
+
+All iOS devices have a main screen, but you can also connect them to an external screen. You access the main screen and any connected screens using type properties of the UIScreen class.
+
+     let mainScreen = UIScreen.main // UIScreen
+     let screens = UIScreen.screens // [UIScreen]
+
+## Window (UIWindow)
+
+The window is an instance of the UIWindow class and is at the root of the view hierarchy that contains our app’s user interface. Most apps have a single window for displaying content on the main screen of the device. You might create a second window to show content on an external screen. By default when you create a window, it displays on the main screen unless you assign a different screen.
+
+## Root View Controller (UIViewController)
+
+The root view controller is usually a custom view controller subclass and supplies the view content for the main window. You typically either load it from your main storyboard or create it manually in the application delegate. Either way, the act of making it the root view controller of the main window adds the view controller’s view to the main window.
+
+## Views (UIView)
+
+The order of the views in the array is crucial as it sets the display order from back to front. So the view at index 0 is at the back, and the last view in the array is at the front.
+Add a subview to a parent view by calling the addSubview method of the parent. This appends the subview to the end of the subviews array, so it appears at the front.
+What happens if a subview is too big to fit within the bounds of its superview? By default, nothing prevents a subview from extending beyond the bounds of its superview.
+Remember that for your views to be visible they must also eventually be part of a view hierarchy that has the main window at its root. You can check for this with the window property of UIView. If this property is nil for a view, then it’s not on-screen.
+
+![frame](frame.png)
+
+Apple warns that when a view has a transform, other than the identity transform, the frame is undefined. If you need to get the size, or resize or move a view with a transform use the bounds and center.
