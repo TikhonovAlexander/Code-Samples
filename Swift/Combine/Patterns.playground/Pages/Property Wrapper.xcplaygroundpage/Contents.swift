@@ -1,6 +1,7 @@
 //: [Previous](@previous)
 
-import Foundation
+import UIKit
+import Combine
 
 @propertyWrapper
 struct UserDefault<T> {
@@ -29,5 +30,22 @@ struct UserDefaultsConfig {
 print(UserDefaultsConfig.firstLanch)
 UserDefaultsConfig.firstLanch = true
 print(UserDefaultsConfig.firstLanch)
+
+final class FormViewController: UIViewController {
+    
+    @Published var isSubmitAllowed: Bool = false
+    
+    @IBOutlet private weak var acceptTermsSwitch: UISwitch!
+    @IBOutlet private weak var submitButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        $isSubmitAllowed.receive(on: DispatchQueue.main).assign(to: \.isEnabled, on: submitButton)
+    }
+    
+    @IBAction func didSwitch(_ sender: UISwitch) {
+        isSubmitAllowed = sender.isOn
+    }
+}
 
 //: [Next](@next)

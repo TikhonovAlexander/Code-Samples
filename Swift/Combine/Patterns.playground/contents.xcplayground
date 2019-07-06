@@ -3,7 +3,7 @@
     <pages>
         <page name='Pattern 2 Making a network request with dataTaskPublisher'/>
         <page name='Pattern 1 Creating a subscriber with sink'/>
-        <page name='Sample'/>
+        <page name='NotificationPublisher'/>
         <page name='Property Wrapper'/>
     </pages>
 </playground>
