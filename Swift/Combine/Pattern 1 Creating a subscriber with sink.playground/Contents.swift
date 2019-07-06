@@ -1,8 +1,11 @@
+
+
+
+
 import Combine
 import Foundation
 
-
-
+print("===== JUST MAP")
 let just = Just("3")
     .map { value -> Int? in
         return Int(value)
@@ -11,7 +14,7 @@ let just = Just("3")
 }) { recievedValue in
     print(recievedValue ?? "nil")
 }
-print("=====")
+print("===== JUST FLAMAP")
 let just2 = Just("5")
     .flatMap { value -> Just<Int> in // Transforms all elements from an upstream publisher into a new or existing publisher.
         return Just(Int(value)!)
@@ -20,7 +23,7 @@ let just2 = Just("5")
 }) { recievedValue in
     print(recievedValue)
 }
-print("=====")
+print("===== JUST COMPACTMAP")
 
 let just3 = Just("7")
     .compactMap { value -> Int? in
@@ -30,4 +33,9 @@ let just3 = Just("7")
 }) { recievedValue in
     print(recievedValue)
 }
+
+print("===== PassthroughSubject MAP")
+let p = PassthroughSubject<String, Error>()
+p.send("9")
+
 print("=====")
