@@ -31,12 +31,11 @@ let remoteDataPublisher = URLSession.shared.dataTaskPublisher(for: myURL!)
 }
 .decode(type: IPInfo.self, decoder: JSONDecoder())
     .eraseToAnyPublisher()
-    .sink { (info) in
-        print(info)
+.sink(receiveCompletion: { (completion) in
+    print(completion)
+}) { recievedValue in
+    print("recievedValue", recievedValue)
 }
-
-
-
 
 
 

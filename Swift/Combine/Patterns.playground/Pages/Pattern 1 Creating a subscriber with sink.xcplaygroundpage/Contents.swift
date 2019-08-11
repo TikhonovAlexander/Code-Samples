@@ -12,17 +12,24 @@ let just = Just("3")
 }.sink(receiveCompletion: { (completion) in
     print(completion)
 }) { recievedValue in
-    print(recievedValue ?? "nil")
+    print("recievedValue", recievedValue ?? "nil")
 }
-print("===== JUST FLAMAP")
-let just2 = Just("5")
+
+
+print("===== JUST FLATMAP")
+let just2 = Just("532s")
     .flatMap { value -> Just<Int> in // Transforms all elements from an upstream publisher into a new or existing publisher.
-        return Just(Int(value)!)
+        if let v = Int(value) {
+            return Just(Int(v))
+        }
+        return Just(-1)
 }.sink(receiveCompletion: { (completion) in
     print(completion)
 }) { recievedValue in
-    print(recievedValue)
+    print("recievedValue", recievedValue)
 }
+
+
 print("===== JUST COMPACTMAP")
 
 let just3 = Just("7")
@@ -31,11 +38,15 @@ let just3 = Just("7")
 }.sink(receiveCompletion: { (completion) in
     print(completion)
 }) { recievedValue in
-    print(recievedValue)
+    print("recievedValue", recievedValue)
 }
 
 print("===== PassthroughSubject MAP")
 let p = PassthroughSubject<String, Error>()
+p.sink(receiveCompletion: { (completion) in
+    print(completion)
+}) { recievedValue in
+    print("recievedValue", recievedValue)
+}
 p.send("9")
-
 print("=====")
