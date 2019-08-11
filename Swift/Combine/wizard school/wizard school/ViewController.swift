@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     
     var signupButtonStream: AnyCancellable?
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         
