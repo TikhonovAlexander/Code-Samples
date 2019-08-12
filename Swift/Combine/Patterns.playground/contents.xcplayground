@@ -6,5 +6,6 @@
         <page name='NotificationPublisher'/>
         <page name='Property Wrapper'/>
         <page name='Publishers'/>
+        <page name='Subjects'/>
     </pages>
 </playground>
