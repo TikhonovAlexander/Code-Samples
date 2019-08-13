@@ -7,5 +7,6 @@
         <page name='Property Wrapper'/>
         <page name='Publishers'/>
         <page name='Subjects'/>
+        <page name='Error Handling'/>
     </pages>
 </playground>

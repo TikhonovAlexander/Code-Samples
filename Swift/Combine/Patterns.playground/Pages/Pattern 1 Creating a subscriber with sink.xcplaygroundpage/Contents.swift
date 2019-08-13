@@ -9,12 +9,12 @@ print("===== JUST MAP")
 let just = Just("3")
     .map { value -> Int? in
         return Int(value)
-}.sink(receiveCompletion: { (completion) in
+}
+.sink(receiveCompletion: { (completion) in
     print(completion)
 }) { recievedValue in
     print("recievedValue", recievedValue ?? "nil")
 }
-
 
 print("===== JUST FLATMAP")
 let just2 = Just("532s")
