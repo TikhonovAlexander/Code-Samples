@@ -37,27 +37,27 @@ enum RequestError: Error {
 }
 let placeholder = UIImage()
 let imageURLPublisher = PassthroughSubject<URL, RequestError>()
-let cancellable = imageURLPublisher.flatMap { requestURL in
+let cancellable = imageURLPublisher.flatMap { requestURL  in
     return URLSession.shared.dataTaskPublisher(for: requestURL)
-        .mapError { (urlError) -> RequestError in
-            return RequestError.sessionError(error: urlError)
+        .map{ (result) -> UIImage? in
+            return UIImage(data: result.data)
+    }
+    .catch{ (requestError) in
+        Future { promise in
+            promise(.success(placeholder))
+        }
     }
 }
-.map{ (result) -> UIImage? in
-    return UIImage(data: result.data)
-}
-.catch{ (requestError) -> Just<UIImage?> in
-    return Just(placeholder)
-}
+
 .sink(receiveCompletion: { (completion) in
     print(completion)
 }) { result in
     print(result ?? "No image")
 }
 
+imageURLPublisher.send(URL(string: "https://unknown.url/image")!)
 imageURLPublisher.send(URL(string: "https://httpbin.org/image/jpeg")!)
 
-imageURLPublisher.send(URL(string: "https://unknown.url/image")!)
 
 let aw = [1, 2].publisher.share()
 
