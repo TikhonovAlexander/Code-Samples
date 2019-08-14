@@ -71,4 +71,27 @@ arr.publisher.min()
     print(value)
 }
 
+ps.send("Event 0")
+let sub1 = ps.eraseToAnyPublisher()
+sub1.sink { (value) in
+    print("sub1: \(value)")
+}
+ps.send("Event 1")
+let sub2 = ps.eraseToAnyPublisher()
+sub2.sink { (value) in
+    print("sub2: \(value)")
+}
+ps.send("Event 2")
+
+
+let j = Just("Privet")
+let sub3 = j.eraseToAnyPublisher()
+sub3.sink { (value) in
+    print("sub3: \(value)")
+}
+let sub4 = j.eraseToAnyPublisher()
+sub4.sink { (value) in
+    print("sub4: \(value)")
+}
+
 //: [Next](@next)

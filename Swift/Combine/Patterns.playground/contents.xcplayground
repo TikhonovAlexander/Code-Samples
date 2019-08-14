@@ -8,5 +8,7 @@
         <page name='Publishers'/>
         <page name='Subjects'/>
         <page name='Error Handling'/>
+        <page name='Transforming'/>
+        <page name='Custom'/>
     </pages>
 </playground>
