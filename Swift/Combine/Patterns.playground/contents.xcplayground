@@ -10,5 +10,6 @@
         <page name='Error Handling'/>
         <page name='Transforming'/>
         <page name='Custom'/>
+        <page name='Applying Sequence Operations to Elements'/>
     </pages>
 </playground>
