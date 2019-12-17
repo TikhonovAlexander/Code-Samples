@@ -29,6 +29,21 @@ protocol Graph {
     func weight(from source: Vertex<Element>, to destination: Vertex<Element>) -> Double?
 }
 
+extension Graph {
+    func addUndirectedEdge(from source: Vertex<Element>, to destination: Vertex<Element>, weight: Double?) {
+        addDirectedEdge(from: source, to: destination, weight: weight)
+        addDirectedEdge(from: destination, to: source, weight: weight)
+    }
+    func add(_ edge: EdgeType, from source: Vertex<Element>, to destination: Vertex<Element>, weight: Double?) {
+        switch edge {
+        case .directed:
+            addDirectedEdge(from: source, to: destination, weight: weight)
+        case .undirected:
+            addUndirectedEdge(from: source, to: destination, weight: weight)
+        }
+    }
+}
+
 extension Vertex: CustomStringConvertible {
     var description: String {
         "\(index): \(data)"
@@ -49,23 +64,9 @@ class AdjacencyList<T: Hashable>: Graph {
         let edge = Edge(source: source, destination: destination, weight: weight)
         adjacencies[source]?.append(edge)
     }
-    func addUndirectedEdge(from source: Vertex<T>, to destination: Vertex<T>, weight: Double?) {
-        addDirectedEdge(from: source, to: destination, weight: weight)
-        addDirectedEdge(from: destination, to: source, weight: weight)
-    }
-    func add(_ edge: EdgeType, from source: Vertex<T>, to destination: Vertex<T>, weight: Double?) {
-        switch edge {
-        case .directed:
-            addDirectedEdge(from: source, to: destination, weight: weight)
-        case .undirected:
-            addUndirectedEdge(from: source, to: destination, weight: weight)
-        }
-    }
-    
     func edges(from source: Vertex<T>) -> [Edge<T>] {
         adjacencies[source] ?? []
     }
-    
     func weight(from source: Vertex<T>, to destination: Vertex<T>) -> Double? {
         edges(from: source).first { $0.destination == destination }?.weight
     }
@@ -111,3 +112,30 @@ graph.add(.undirected, from: washingtonDC, to: seattle, weight: 277)
 graph.add(.undirected, from: sanFrancisco, to: seattle, weight: 218)
 graph.add(.undirected, from: austinTexas, to: sanFrancisco, weight: 297)
 print(graph)
+
+
+// Write a method to count the number of paths between two vertices in a directed graph. 
+extension Graph where Element: Hashable {
+    func countNumberPaths(vertex1: Vertex<Element>, vertex2: Vertex<Element>) -> Int {
+        var count = 0
+        var visited: Set<Vertex<Element>> = []
+        countPaths(vertex1: vertex1, vertex2: vertex2, visited: &visited, count: &count)
+        return count
+    }
+    
+    private func countPaths(vertex1: Vertex<Element>, vertex2: Vertex<Element>, visited: inout Set<Vertex<Element>>, count: inout Int) {
+        visited.insert(vertex1)
+        if vertex1 == vertex2 {
+            count += 1
+        } else {
+            let vertex1Edges = edges(from: vertex1)
+            for edge in vertex1Edges {
+                guard !visited.contains(edge.destination) else { continue }
+                countPaths(vertex1: edge.destination, vertex2: vertex2, visited: &visited, count: &count)
+            }
+        }
+        visited.remove(vertex1)
+    }
+}
+
+graph.countNumberPaths(vertex1: sanFrancisco, vertex2: tokyo)

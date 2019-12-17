@@ -29,6 +29,21 @@ protocol Graph {
     func weight(from source: Vertex<Element>, to destination: Vertex<Element>) -> Double?
 }
 
+extension Graph {
+    func addUndirectedEdge(from source: Vertex<Element>, to destination: Vertex<Element>, weight: Double?) {
+        addDirectedEdge(from: source, to: destination, weight: weight)
+        addDirectedEdge(from: destination, to: source, weight: weight)
+    }
+    func add(_ edge: EdgeType, from source: Vertex<Element>, to destination: Vertex<Element>, weight: Double?) {
+        switch edge {
+        case .directed:
+            addDirectedEdge(from: source, to: destination, weight: weight)
+        case .undirected:
+            addUndirectedEdge(from: source, to: destination, weight: weight)
+        }
+    }
+}
+
 extension Vertex: CustomStringConvertible {
     var description: String {
         "\(index): \(data)"
@@ -49,23 +64,9 @@ class AdjacencyList<T: Hashable>: Graph {
         let edge = Edge(source: source, destination: destination, weight: weight)
         adjacencies[source]?.append(edge)
     }
-    func addUndirectedEdge(from source: Vertex<T>, to destination: Vertex<T>, weight: Double?) {
-        addDirectedEdge(from: source, to: destination, weight: weight)
-        addDirectedEdge(from: destination, to: source, weight: weight)
-    }
-    func add(_ edge: EdgeType, from source: Vertex<T>, to destination: Vertex<T>, weight: Double?) {
-        switch edge {
-        case .directed:
-            addDirectedEdge(from: source, to: destination, weight: weight)
-        case .undirected:
-            addUndirectedEdge(from: source, to: destination, weight: weight)
-        }
-    }
-    
     func edges(from source: Vertex<T>) -> [Edge<T>] {
         adjacencies[source] ?? []
     }
-    
     func weight(from source: Vertex<T>, to destination: Vertex<T>) -> Double? {
         edges(from: source).first { $0.destination == destination }?.weight
     }
