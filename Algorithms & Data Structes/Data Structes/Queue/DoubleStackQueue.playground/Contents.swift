@@ -8,35 +8,40 @@ public protocol Queue {
     var peek: Element? { get }
 }
 
-public struct ArrayQueue<T>: Queue {
+public struct DoubleStackQueue<T>: Queue {
     
-    private var array: [T] = []
+    private var leftStack = [T]()
+    private var rightStack = [T]()
     public init() {}
     
     mutating public func enqueue(_ element: T) -> Bool {
-        array.append(element)
+        rightStack.append(element)
         return true
     }
     mutating public func dequeue() -> T? {
-        isEmpty ? nil : array.removeFirst()
+        if leftStack.isEmpty {
+            leftStack = rightStack.reversed()
+            rightStack.removeAll()
+        }
+        return leftStack.popLast()
     }
     
     public var isEmpty: Bool {
-        array.isEmpty
+        leftStack.isEmpty && rightStack.isEmpty
     }
     
     public var peek: T? {
-        array.first
+        leftStack.isEmpty ? rightStack.first : leftStack.last
     }
 }
 
-extension ArrayQueue: CustomStringConvertible {
+extension DoubleStackQueue: CustomStringConvertible {
     public var description: String {
-        String(describing: array)
+        String(describing: leftStack.reversed() + rightStack)
     }
 }
 
-var queue = ArrayQueue<String>()
+var queue = DoubleStackQueue<String>()
 queue.enqueue("Ray")
 queue.enqueue("Brian")
 queue.enqueue("Eric")

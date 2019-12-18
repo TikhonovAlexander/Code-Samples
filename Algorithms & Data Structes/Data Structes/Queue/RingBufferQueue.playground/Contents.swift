@@ -1,5 +1,6 @@
 import UIKit
 
+
 public protocol Queue {
     associatedtype Element
     mutating func enqueue(_ element: Element) -> Bool
@@ -8,35 +9,36 @@ public protocol Queue {
     var peek: Element? { get }
 }
 
-public struct ArrayQueue<T>: Queue {
+public struct RingBufferQueue<T>: Queue {
     
-    private var array: [T] = []
-    public init() {}
+    private var ringBuffer: RingBuffer<T>
+    public init(count: Int) {
+        ringBuffer = RingBuffer(count: count)
+    }
     
     mutating public func enqueue(_ element: T) -> Bool {
-        array.append(element)
-        return true
+        return ringBuffer.write(element)
     }
     mutating public func dequeue() -> T? {
-        isEmpty ? nil : array.removeFirst()
+        ringBuffer.read()
     }
     
     public var isEmpty: Bool {
-        array.isEmpty
+        ringBuffer.isEmpty
     }
     
     public var peek: T? {
-        array.first
+        ringBuffer.first
     }
 }
 
-extension ArrayQueue: CustomStringConvertible {
+extension RingBufferQueue: CustomStringConvertible {
     public var description: String {
-        String(describing: array)
+        String(describing: ringBuffer)
     }
 }
 
-var queue = ArrayQueue<String>()
+var queue = RingBufferQueue<String>(count: 5)
 queue.enqueue("Ray")
 queue.enqueue("Brian")
 queue.enqueue("Eric")
