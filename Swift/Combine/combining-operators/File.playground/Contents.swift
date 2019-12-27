@@ -166,7 +166,7 @@ example(of: "merge(with:)") {
     p2.send(completion: .finished)
 }
 
-example(of: "merge(with:)") {
+example(of: "combineLatest") {
     let p1 = PassthroughSubject<Int, Never>()
     let p2 = PassthroughSubject<String, Never>()
     

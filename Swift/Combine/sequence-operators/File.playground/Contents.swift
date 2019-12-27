@@ -67,7 +67,7 @@ example(of: "contains") {
 }
 
 example(of: "allSatisfy") {
-    [2, 4, 6].publisher
+    [2, 4, 5, 6].publisher
         .print()
         .allSatisfy { $0.isMultiple(of: 2) }
         .sink(receiveValue: { print($0) })

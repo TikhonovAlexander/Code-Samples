@@ -76,6 +76,7 @@
         let newPhotos = photos.selectedPhotos
             .prefix(while: { [unowned self] _ in self.images.value.count < 6 })
             .share()
+        
         newPhotos
             .map { newImage in
                 self.images.value + [newImage]
