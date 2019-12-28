@@ -9,26 +9,30 @@ var str = "Hello, playground"
 //}
 
 var store = Set<AnyCancellable>()
-
-let queue = DispatchQueue.global(qos: .background)
-queue.async {
-    let runLoop = RunLoop.current
-    runLoop.run()
-}
-
+//let globalQueue = DispatchQueue.global(qos: .background)
+//globalQueue.asyncAfter(deadline: .now() + 2) {
 //
-//DispatchQueue.global().async {
-queue.asyncAfter(deadline: .now() + 2) {
+//    Timer.publish(every: 1.0, on: .current, in: .common)
+//        .autoconnect()
+//        .scan(0) { counter, _ in counter + 1 }
+//        .sink { counter in
+//            print(counter)
+//    }
+//    .store(in: &store)
+//    // https://stackoverflow.com/questions/38000727/need-some-clarifications-about-dispatch-queue-thread-and-nsrunloop
+//    RunLoop.current.run()
+//}
 
-    let runLoop = RunLoop.current
-    runLoop.run()
-    
-    Timer.publish(every: 1.0, on: .current, in: .common)
-        .autoconnect()
-        .scan(0) { counter, _ in counter + 1 }
-        .sink { counter in
-            print(counter)
-    }
-    .store(in: &store)
+let main = DispatchQueue.main
+let source = PassthroughSubject<Int, Never>()
+var counter = 0
+main.schedule(after: main.now, interval: .seconds(1)) {
+    source.send(counter)
+    counter += 1
+}.store(in: &store)
+
+let subscription = source.sink {
+    print($0)
 }
+
 print("End")
