@@ -43,8 +43,9 @@ class ScrumManager: Manager {
     }
 }
 
-ScrumManager.performance
-let scrumManager = ScrumManager()
+let manager: Manager = Manager()
+manager.talk()
+let scrumManager: Manager = ScrumManager()
 scrumManager.talk()
 
 // Opaque return types
