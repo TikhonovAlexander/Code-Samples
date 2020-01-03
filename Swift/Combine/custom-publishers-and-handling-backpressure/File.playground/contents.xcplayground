@@ -6,5 +6,6 @@
         <page name='ShareReplay operator'/>
         <page name='PausableSink'/>
         <page name='fibonacci'/>
+        <page name='fibonacci for habr'/>
     </pages>
 </playground>
