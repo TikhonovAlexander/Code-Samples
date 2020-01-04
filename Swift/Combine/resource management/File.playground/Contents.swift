@@ -10,21 +10,30 @@ let url = URL(string: "https://ya.ru")!
 let publisher = URLSession.shared
     .dataTaskPublisher(for: url)
     .map(\.data)
-    .print("shared")
+    .print("publisher ya.ru")
     .share()
     .eraseToAnyPublisher()
 
-publisher.sink(receiveCompletion: { _ in
-}) { data in
-    print("publisher sink1 \(data.count)")
-}.store(in: &store)
+publisher
+    .sink(receiveCompletion: { _ in }) { data in
+        print("publisher sink1 \(data.count)")
+    }
+    .store(in: &store)
+
 DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
     publisher.sink(receiveCompletion: { _ in
     }) { data in
         print("publisher sink2 \(data.count)")
     }
-.store(in: &store)
+    .store(in: &store)
 }
+
+publisher
+.sink(receiveCompletion: { _ in }) { data in
+    print("publisher sink3 \(data.count)")
+}
+.store(in: &store)
+
 
 let subject = PassthroughSubject<Data, URLError>()
 let publisher2 = URLSession.shared
@@ -37,12 +46,13 @@ publisher2.sink(receiveCompletion: { _ in
 }) { data in
     print("publisher2 sink1 \(data.count)")
 }.store(in: &store)
+
 DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200)) {
     publisher2.sink(receiveCompletion: { _ in
     }) { data in
         print("publisher2 sink2 \(data.count)")
     }
-.store(in: &store)
+    .store(in: &store)
 }
 
 publisher2
@@ -68,3 +78,7 @@ DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(2)) {
         print("Future after value \(value)")
     }.store(in: &store)
 }
+
+let p1 = Just(2).share()
+let s1 = p1.print().sink { _ in }
+let s2 = p1.print().sink { _ in }
