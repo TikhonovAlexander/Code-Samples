@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fgo-V3-vtl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="WeO-Xl-kDo">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="Fgo-V3-vtl" customClass="OnboardingViewController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fOb-uv-q4V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Onboarding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-45-A4o">
+                                <rect key="frame" x="159.5" y="437.5" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0WB-45-A4o" firstAttribute="centerX" secondItem="fOb-uv-q4V" secondAttribute="centerX" id="Kl3-rk-2XN"/>
+                            <constraint firstItem="0WB-45-A4o" firstAttribute="centerY" secondItem="fOb-uv-q4V" secondAttribute="centerY" id="LIG-4v-5Y4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o8Y-QK-XuY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W44-tv-26n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2001" y="11"/>
+        </scene>
+        <!--Onboarding2 View Controller-->
+        <scene sceneID="ve7-80-cb2">
+            <objects>
+                <viewController storyboardIdentifier="Onboarding2ViewController" id="Sfj-d4-7gN" customClass="Onboarding2ViewController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NnU-lK-I5u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Onboarding 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HC-oZ-QA5">
+                                <rect key="frame" x="152.5" y="437.5" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2HC-oZ-QA5" firstAttribute="centerX" secondItem="NnU-lK-I5u" secondAttribute="centerX" id="PYF-Y7-EeP"/>
+                            <constraint firstItem="2HC-oZ-QA5" firstAttribute="centerY" secondItem="NnU-lK-I5u" secondAttribute="centerY" id="jaa-U3-T9s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yBE-OL-Fa0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJb-PV-K2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-975.36231884057975" y="10.714285714285714"/>
+        </scene>
+        <!--Feeds View Controller-->
+        <scene sceneID="BIF-hE-hPe">
+            <objects>
+                <viewController storyboardIdentifier="FeedsViewController" id="AVj-Xp-y6f" customClass="FeedsViewController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WHX-fc-ZbS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="clf-8Z-2ST"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5v-TG-cCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="-213"/>
+        </scene>
+        <!--Feed Detail View Controller-->
+        <scene sceneID="Aea-Sg-WEP">
+            <objects>
+                <viewController storyboardIdentifier="FeedDetailViewController" id="ibP-i2-jve" customClass="FeedDetailViewController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UB5-9d-ABq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TB2-XZ-Xw2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEz-pf-94v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="-208"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="eO3-6f-GU3">
+            <objects>
+                <viewController storyboardIdentifier="SignupViewController" id="4b7-pm-xrB" customClass="SignupViewController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rl6-Ww-NM6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Tsj-uP-fac"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1U-76-6gX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="513"/>
+        </scene>
+    </scenes>
+</document>
