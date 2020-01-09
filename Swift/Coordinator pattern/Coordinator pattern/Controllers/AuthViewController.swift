@@ -1,5 +1,5 @@
 //
-//   Onboarding2ViewController.swift
+//  AuthViewController.swift
 //  Coordinator pattern
 //
 //  Created by atikhonov on 08.01.2020.
@@ -8,14 +8,17 @@
 
 import UIKit
 
-class Onboarding2ViewController: UIViewController {
-
+class AuthViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Auth"
     }
-
+    
     deinit {
-        print("Onboarding2ViewController")
+        print("AuthViewController")
     }
+    
 }
+
+

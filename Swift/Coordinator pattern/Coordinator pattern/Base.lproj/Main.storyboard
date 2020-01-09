@@ -15,44 +15,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Onboarding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-45-A4o">
-                                <rect key="frame" x="159.5" y="437.5" width="95" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="wP1-yg-C2c">
+                                <rect key="frame" x="111" y="394.5" width="192" height="107.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text=" Onboarding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-45-A4o">
+                                        <rect key="frame" x="48.5" y="0.0" width="95" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz1-OT-AF9">
+                                        <rect key="frame" x="0.0" y="77.5" width="192" height="30"/>
+                                        <state key="normal" title="Show next onboarding page"/>
+                                        <connections>
+                                            <action selector="showNextTapped:" destination="Fgo-V3-vtl" eventType="touchUpInside" id="lLO-l3-SS6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0WB-45-A4o" firstAttribute="centerX" secondItem="fOb-uv-q4V" secondAttribute="centerX" id="Kl3-rk-2XN"/>
-                            <constraint firstItem="0WB-45-A4o" firstAttribute="centerY" secondItem="fOb-uv-q4V" secondAttribute="centerY" id="LIG-4v-5Y4"/>
+                            <constraint firstItem="wP1-yg-C2c" firstAttribute="centerY" secondItem="fOb-uv-q4V" secondAttribute="centerY" id="JLn-Ww-NZT"/>
+                            <constraint firstItem="wP1-yg-C2c" firstAttribute="centerX" secondItem="fOb-uv-q4V" secondAttribute="centerX" id="Sly-LF-EyT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o8Y-QK-XuY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W44-tv-26n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2001" y="11"/>
+            <point key="canvasLocation" x="-2001.449275362319" y="10.714285714285714"/>
         </scene>
-        <!--Onboarding2 View Controller-->
+        <!--Onboarding Final View Controller-->
         <scene sceneID="ve7-80-cb2">
             <objects>
-                <viewController storyboardIdentifier="Onboarding2ViewController" id="Sfj-d4-7gN" customClass="Onboarding2ViewController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingFinalViewController" id="Sfj-d4-7gN" customClass="OnboardingFinalViewController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NnU-lK-I5u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Onboarding 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HC-oZ-QA5">
-                                <rect key="frame" x="152.5" y="437.5" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="xGZ-or-Rxc">
+                                <rect key="frame" x="140" y="351" width="134.5" height="194.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text=" Onboarding Final" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUk-6Z-ytl">
+                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdD-It-iUA">
+                                        <rect key="frame" x="27" y="77.5" width="80" height="30"/>
+                                        <state key="normal" title="Show feeds"/>
+                                        <connections>
+                                            <action selector="showFeedsTapped:" destination="Sfj-d4-7gN" eventType="touchUpInside" id="4Ta-0J-fLi"/>
+                                            <action selector="showNextTapped:" destination="Fgo-V3-vtl" eventType="touchUpInside" id="rao-XW-bGh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQF-Vl-v4f">
+                                        <rect key="frame" x="30" y="164.5" width="74" height="30"/>
+                                        <state key="normal" title="Show Auth"/>
+                                        <connections>
+                                            <action selector="showAuthTapped:" destination="Sfj-d4-7gN" eventType="touchUpInside" id="vgV-aQ-x1l"/>
+                                            <action selector="showNextTapped:" destination="Fgo-V3-vtl" eventType="touchUpInside" id="gu0-nr-QzT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2HC-oZ-QA5" firstAttribute="centerX" secondItem="NnU-lK-I5u" secondAttribute="centerX" id="PYF-Y7-EeP"/>
-                            <constraint firstItem="2HC-oZ-QA5" firstAttribute="centerY" secondItem="NnU-lK-I5u" secondAttribute="centerY" id="jaa-U3-T9s"/>
+                            <constraint firstItem="xGZ-or-Rxc" firstAttribute="centerX" secondItem="NnU-lK-I5u" secondAttribute="centerX" id="6kv-MM-bbr"/>
+                            <constraint firstItem="xGZ-or-Rxc" firstAttribute="centerY" secondItem="NnU-lK-I5u" secondAttribute="centerY" id="LlT-m2-ALy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yBE-OL-Fa0"/>
                     </view>
@@ -91,14 +124,46 @@
             </objects>
             <point key="canvasLocation" x="859" y="-208"/>
         </scene>
-        <!--Signup View Controller-->
-        <scene sceneID="eO3-6f-GU3">
+        <!--Feed Detail2 View Controller-->
+        <scene sceneID="wZb-iS-oby">
             <objects>
-                <viewController storyboardIdentifier="SignupViewController" id="4b7-pm-xrB" customClass="SignupViewController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rl6-Ww-NM6">
+                <viewController storyboardIdentifier="FeedDetail2ViewController" id="jyy-ht-vDd" customClass="FeedDetail2ViewController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fjh-YO-5rU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tQN-4b-C6P"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAo-EI-rjd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813" y="-208"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="eO3-6f-GU3">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="4b7-pm-xrB" customClass="AuthViewController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rl6-Ww-NM6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GmS-3n-1gr">
+                                <rect key="frame" x="189" y="438" width="36" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzF-fY-o1L">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GmS-3n-1gr" firstAttribute="centerY" secondItem="Rl6-Ww-NM6" secondAttribute="centerY" id="6Ov-fu-pzZ"/>
+                            <constraint firstItem="GmS-3n-1gr" firstAttribute="centerX" secondItem="Rl6-Ww-NM6" secondAttribute="centerX" id="YSB-ab-HPI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Tsj-uP-fac"/>
                     </view>
                 </viewController>

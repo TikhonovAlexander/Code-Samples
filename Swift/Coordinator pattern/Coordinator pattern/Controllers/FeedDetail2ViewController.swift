@@ -1,5 +1,5 @@
 //
-//  SignupViewController.swift
+//  FeedDetail2ViewController.swift
 //  Coordinator pattern
 //
 //  Created by atikhonov on 08.01.2020.
@@ -8,17 +8,15 @@
 
 import UIKit
 
-class SignupViewController: UIViewController {
-    
+class FeedDetail2ViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Signup"
+
+        title = "Feed detail 2"
     }
-    
+
     deinit {
-        print("SignupViewController")
+        print("FeedDetail2ViewController")
     }
-    
 }
-
-

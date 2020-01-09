@@ -15,14 +15,15 @@
 		0DA8C05023C610FF006B0243 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C04F23C610FF006B0243 /* Coordinator.swift */; };
 		0DA8C05223C61188006B0243 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C05123C61188006B0243 /* AppCoordinator.swift */; };
 		0DA8C05523C6124F006B0243 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C05423C6124F006B0243 /* OnboardingViewController.swift */; };
-		0DA8C05723C6132D006B0243 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C05623C6132D006B0243 /* SignupViewController.swift */; };
+		0DA8C05723C6132D006B0243 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C05623C6132D006B0243 /* AuthViewController.swift */; };
 		0DA8C05923C613AF006B0243 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C05823C613AF006B0243 /* Extensions.swift */; };
 		0DA8C05B23C61B4A006B0243 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C05A23C61B4A006B0243 /* FeedsViewController.swift */; };
 		0DA8C05D23C61B57006B0243 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C05C23C61B57006B0243 /* FeedDetailViewController.swift */; };
-		0DA8C06023C624D9006B0243 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C05F23C624D9006B0243 /* Onboarding2ViewController.swift */; };
+		0DA8C06023C624D9006B0243 /* OnboardingFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C05F23C624D9006B0243 /* OnboardingFinalViewController.swift */; };
 		0DA8C06223C62CFF006B0243 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C06123C62CFF006B0243 /* FeedCoordinator.swift */; };
-		0DA8C06423C62D0B006B0243 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C06323C62D0B006B0243 /* SignupCoordinator.swift */; };
+		0DA8C06423C62D0B006B0243 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C06323C62D0B006B0243 /* AuthCoordinator.swift */; };
 		0DA8C06623C62D25006B0243 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C06523C62D25006B0243 /* OnboardingCoordinator.swift */; };
+		0DA8C06823C6403F006B0243 /* FeedDetail2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C06723C6403F006B0243 /* FeedDetail2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,14 +37,15 @@
 		0DA8C04F23C610FF006B0243 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0DA8C05123C61188006B0243 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		0DA8C05423C6124F006B0243 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		0DA8C05623C6132D006B0243 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		0DA8C05623C6132D006B0243 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		0DA8C05823C613AF006B0243 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0DA8C05A23C61B4A006B0243 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		0DA8C05C23C61B57006B0243 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
-		0DA8C05F23C624D9006B0243 /* Onboarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2ViewController.swift; sourceTree = "<group>"; };
+		0DA8C05F23C624D9006B0243 /* OnboardingFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFinalViewController.swift; sourceTree = "<group>"; };
 		0DA8C06123C62CFF006B0243 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
-		0DA8C06323C62D0B006B0243 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
+		0DA8C06323C62D0B006B0243 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		0DA8C06523C62D25006B0243 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		0DA8C06723C6403F006B0243 /* FeedDetail2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetail2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +95,11 @@
 			isa = PBXGroup;
 			children = (
 				0DA8C05423C6124F006B0243 /* OnboardingViewController.swift */,
-				0DA8C05F23C624D9006B0243 /* Onboarding2ViewController.swift */,
+				0DA8C05F23C624D9006B0243 /* OnboardingFinalViewController.swift */,
 				0DA8C05A23C61B4A006B0243 /* FeedsViewController.swift */,
 				0DA8C05C23C61B57006B0243 /* FeedDetailViewController.swift */,
-				0DA8C05623C6132D006B0243 /* SignupViewController.swift */,
+				0DA8C06723C6403F006B0243 /* FeedDetail2ViewController.swift */,
+				0DA8C05623C6132D006B0243 /* AuthViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -108,7 +111,7 @@
 				0DA8C05123C61188006B0243 /* AppCoordinator.swift */,
 				0DA8C06523C62D25006B0243 /* OnboardingCoordinator.swift */,
 				0DA8C06123C62CFF006B0243 /* FeedCoordinator.swift */,
-				0DA8C06323C62D0B006B0243 /* SignupCoordinator.swift */,
+				0DA8C06323C62D0B006B0243 /* AuthCoordinator.swift */,
 			);
 			path = Coordinates;
 			sourceTree = "<group>";
@@ -184,14 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DA8C05723C6132D006B0243 /* SignupViewController.swift in Sources */,
+				0DA8C06823C6403F006B0243 /* FeedDetail2ViewController.swift in Sources */,
+				0DA8C05723C6132D006B0243 /* AuthViewController.swift in Sources */,
 				0DA8C05023C610FF006B0243 /* Coordinator.swift in Sources */,
 				0DA8C05B23C61B4A006B0243 /* FeedsViewController.swift in Sources */,
 				0DA8C05223C61188006B0243 /* AppCoordinator.swift in Sources */,
-				0DA8C06423C62D0B006B0243 /* SignupCoordinator.swift in Sources */,
+				0DA8C06423C62D0B006B0243 /* AuthCoordinator.swift in Sources */,
 				0DA8C03C23C610A0006B0243 /* AppDelegate.swift in Sources */,
 				0DA8C03E23C610A0006B0243 /* SceneDelegate.swift in Sources */,
-				0DA8C06023C624D9006B0243 /* Onboarding2ViewController.swift in Sources */,
+				0DA8C06023C624D9006B0243 /* OnboardingFinalViewController.swift in Sources */,
 				0DA8C06223C62CFF006B0243 /* FeedCoordinator.swift in Sources */,
 				0DA8C05523C6124F006B0243 /* OnboardingViewController.swift in Sources */,
 				0DA8C06623C62D25006B0243 /* OnboardingCoordinator.swift in Sources */,
