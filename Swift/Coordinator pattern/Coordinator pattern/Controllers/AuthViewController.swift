@@ -19,6 +19,9 @@ class AuthViewController: UIViewController {
         print("AuthViewController")
     }
     
+    @IBAction func loginTapped(_ sender: Any) {
+        
+    }
 }
 
 

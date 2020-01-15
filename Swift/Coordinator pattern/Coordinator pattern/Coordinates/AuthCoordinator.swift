@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class AuthCoordinator: Coordinator {
+final class AuthCoordinator {
     
     var children: [Coordinator] = []
     
@@ -31,9 +31,8 @@ final class AuthCoordinator: Coordinator {
         setRootViewController(rootViewController: auth) { [weak self]  _ in
             if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
                 guard let strongSelf = self else { return }
-                sceneDelegate.appCoordinator?.children.removeAll()
-                sceneDelegate.appCoordinator?.navigationController = nil
-                sceneDelegate.appCoordinator?.children.append(strongSelf)
+//                sceneDelegate.appCoordinator?.children.removeAll()
+//                sceneDelegate.appCoordinator?.children.append(strongSelf)
             }
         }
     }

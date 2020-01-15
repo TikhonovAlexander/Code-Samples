@@ -8,11 +8,9 @@
 
 import UIKit
 
+// https://medium.com/blacklane-engineering/coordinators-essential-tutorial-part-i-376c836e9ba7
+
 protocol Coordinator: class {
-    
-    var children: [Coordinator] { get set }
-    
-    init(navigationController: UINavigationController)
-    
     func start()
+    func start(with option: DeepLinkOption?)
 }

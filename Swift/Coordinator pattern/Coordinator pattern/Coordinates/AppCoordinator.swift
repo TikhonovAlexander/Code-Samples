@@ -8,27 +8,31 @@
 
 import UIKit
 
-final class AppCoordinator: Coordinator {
+final class AppCoordinator {
     
     var children: [Coordinator] = []
     
-    var navigationController: UINavigationController?
     weak var window: UIWindow?
     
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
-    
-    convenience init(navigationController: UINavigationController, window: UIWindow? = nil) {
-        self.init(navigationController: navigationController)
+    init(window: UIWindow?) {
         self.window = window
     }
     
     func start() {
-        let onboardingCoordinator = OnboardingCoordinator(navigationController: navigationController!)
-        onboardingCoordinator.delegate = self
-        children.append(onboardingCoordinator)
-        onboardingCoordinator.start()
+        let navigationController = UINavigationController()
+//        if Storage.shared.isLoggined() {
+//            let feedCoordinator = FeedCoordinator(navigationController: navigationController)
+//            addChild(feedCoordinator)
+//            feedCoordinator.start()
+//        } else {
+//            let onboardingCoordinator = OnboardingCoordinator(navigationController: navigationController)
+//            onboardingCoordinator.delegate = self
+//            addChild(onboardingCoordinator)
+//            onboardingCoordinator.start()
+//        }
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 }
 
@@ -37,11 +41,12 @@ extension AppCoordinator: OnboardingCoordinatorDelegate {
         let navigationController = UINavigationController()
         if needsAuth {
             let coordinator = AuthCoordinator(navigationController: navigationController, window: window) {
-//                self.children .append(coo)
+//                addChild(coordinator)
             }
             coordinator.start()
         } else {
             let coordinator = FeedCoordinator(navigationController: navigationController)
+//            addChild(coordinator)
             coordinator.start()
         }
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class FeedCoordinator: Coordinator {
+final class FeedCoordinator {
     
     var children: [Coordinator] = []
     

@@ -12,7 +12,7 @@ protocol OnboardingCoordinatorDelegate: class {
     func onboardingEnded(needsAuth: Bool)
 }
 
-final class OnboardingCoordinator: Coordinator {
+final class OnboardingCoordinator {
     
     var children: [Coordinator] = []
     
