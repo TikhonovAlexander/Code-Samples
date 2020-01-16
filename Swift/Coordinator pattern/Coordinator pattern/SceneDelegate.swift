@@ -11,18 +11,21 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var appCoordinator: AppCoordinator?
+    private lazy var appCoordinator: Coordinator = self.makeCoordinator()
+    
+    var rootViewController: UINavigationController {
+        window?.rootViewController as! UINavigationController
+    }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
+        guard let _ = (scene as? UIWindowScene) else { return }
         
-        let window = UIWindow(windowScene: windowScene)
-        self.window = window
+        appCoordinator.start()
         
-        appCoordinator = AppCoordinator(window: window)
-        appCoordinator?.start()
-        window.makeKeyAndVisible()
-        
+    }
+    
+    private func makeCoordinator() -> Coordinator {
+        AppCoordinator(router: RouterImp(rootController: rootViewController), coordinatorFactory: CoordinatorFactoryImp())
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -8,13 +8,9 @@
 
 import UIKit
 
-protocol OnboardingViewControllerDelegate: class {
-    func nextPage()
-}
-
-class OnboardingViewController: UIViewController {
+class OnboardingViewController: UIViewController, OnboardingView {
     
-    weak var delegate: OnboardingViewControllerDelegate?
+    var onNext: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +22,6 @@ class OnboardingViewController: UIViewController {
     }
     
     @IBAction func showNextTapped(_ sender: Any) {
-        delegate?.nextPage()
+        onNext?()
     }
 }

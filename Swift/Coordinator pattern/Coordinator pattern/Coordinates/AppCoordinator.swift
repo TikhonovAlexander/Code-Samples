@@ -8,47 +8,56 @@
 
 import UIKit
 
-final class AppCoordinator {
+final class AppCoordinator: BaseCoordinator {
     
-    var children: [Coordinator] = []
+    private let coordinatorFactory: CoordinatorFactory
+    private let router: Router
     
-    weak var window: UIWindow?
-    
-    init(window: UIWindow?) {
-        self.window = window
+    private var instructor: LaunchInstructor {
+        let onboardingWasShown = Storage.shared.onboardingWasShown
+        let isAutorized = Storage.shared.isLoggined
+        return LaunchInstructor.configure(onboardingWasShown: onboardingWasShown, isAutorized: isAutorized)
     }
     
-    func start() {
-        let navigationController = UINavigationController()
-//        if Storage.shared.isLoggined() {
-//            let feedCoordinator = FeedCoordinator(navigationController: navigationController)
-//            addChild(feedCoordinator)
-//            feedCoordinator.start()
-//        } else {
-//            let onboardingCoordinator = OnboardingCoordinator(navigationController: navigationController)
-//            onboardingCoordinator.delegate = self
-//            addChild(onboardingCoordinator)
-//            onboardingCoordinator.start()
-//        }
-        
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+    init(router: Router, coordinatorFactory: CoordinatorFactory) {
+      self.router = router
+      self.coordinatorFactory = coordinatorFactory
     }
-}
-
-extension AppCoordinator: OnboardingCoordinatorDelegate {
-    func onboardingEnded(needsAuth: Bool) {
-        let navigationController = UINavigationController()
-        if needsAuth {
-            let coordinator = AuthCoordinator(navigationController: navigationController, window: window) {
-//                addChild(coordinator)
-            }
-            coordinator.start()
-        } else {
-            let coordinator = FeedCoordinator(navigationController: navigationController)
-//            addChild(coordinator)
-            coordinator.start()
+    
+    override func start(with option: DeepLinkOption?) {
+        switch instructor {
+        case .auth:
+            runAuthFlow()
+        case .onboarding:
+            runOnboardingFlow()
+        case .main:
+            runMainFlow()
         }
-        
+    }
+
+    private func runAuthFlow() {
+        let coordinator = coordinatorFactory.makeAuthCoordinator(router: router)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            Storage.shared.isLoggined = true
+            self?.start()
+            self?.removeDependency(coordinator)
+        }
+        addDependency(coordinator)
+        coordinator.start()
+    }
+    
+    private func runOnboardingFlow() {
+        let coordinator = coordinatorFactory.makeOnboardingCoordinator(router: router)
+        coordinator.finishFlow = { [weak self] in
+            Storage.shared.onboardingWasShown = true
+            self?.start()
+            self?.removeDependency(coordinator)
+        }
+        addDependency(coordinator)
+        coordinator.start()
+    }
+    
+    private func runMainFlow() {
+        print(#function)
     }
 }

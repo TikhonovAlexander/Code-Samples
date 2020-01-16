@@ -8,7 +8,10 @@
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, LoginView {
+    
+    var onCompleteAuth: (() -> Void)?
+    var onSignUpButtonTap: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +23,11 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
-        
+        onCompleteAuth?()
+    }
+    
+    @IBAction func signUpTapped(_ sender: Any) {
+        onSignUpButtonTap?()
     }
 }
 

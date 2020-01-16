@@ -14,9 +14,7 @@ class Storage {
     private var token: String?
     
     var onboardingWasShown = false
-    var isLoggined: Bool {
-        token != nil
-    }
+    var isLoggined = false
     
     func login(completion: () -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

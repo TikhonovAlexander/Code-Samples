@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fgo-V3-vtl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iiv-Ok-g56">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -7,6 +7,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qET-Me-5Gl">
+            <objects>
+                <navigationController id="Iiv-Ok-g56" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cop-tT-M2q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRi-3v-Pgp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3086" y="21"/>
+        </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="WeO-Xl-kDo">
             <objects>
@@ -55,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="xGZ-or-Rxc">
-                                <rect key="frame" x="140" y="351" width="134.5" height="194.5"/>
+                                <rect key="frame" x="140" y="394.5" width="134.5" height="107.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text=" Onboarding Final" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUk-6Z-ytl">
                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="20.5"/>
@@ -64,19 +77,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdD-It-iUA">
-                                        <rect key="frame" x="27" y="77.5" width="80" height="30"/>
-                                        <state key="normal" title="Show feeds"/>
+                                        <rect key="frame" x="46.5" y="77.5" width="41" height="30"/>
+                                        <state key="normal" title="Finish"/>
                                         <connections>
-                                            <action selector="showFeedsTapped:" destination="Sfj-d4-7gN" eventType="touchUpInside" id="4Ta-0J-fLi"/>
-                                            <action selector="showNextTapped:" destination="Fgo-V3-vtl" eventType="touchUpInside" id="rao-XW-bGh"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQF-Vl-v4f">
-                                        <rect key="frame" x="30" y="164.5" width="74" height="30"/>
-                                        <state key="normal" title="Show Auth"/>
-                                        <connections>
-                                            <action selector="showAuthTapped:" destination="Sfj-d4-7gN" eventType="touchUpInside" id="vgV-aQ-x1l"/>
-                                            <action selector="showNextTapped:" destination="Fgo-V3-vtl" eventType="touchUpInside" id="gu0-nr-QzT"/>
+                                            <action selector="finishTapped:" destination="Sfj-d4-7gN" eventType="touchUpInside" id="heI-Pu-SwU"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -148,19 +152,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GmS-3n-1gr">
-                                <rect key="frame" x="188" y="423" width="38" height="50.5"/>
+                                <rect key="frame" x="182" y="408" width="50" height="80.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzF-fY-o1L">
-                                        <rect key="frame" x="0.0" y="0.0" width="38" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzF-fY-o1L">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VH-bb-5CR">
-                                        <rect key="frame" x="0.0" y="20.5" width="38" height="30"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="50" height="30"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginTapped:" destination="4b7-pm-xrB" eventType="touchUpInside" id="AoW-Fj-RSd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ3-kj-Xjg">
+                                        <rect key="frame" x="0.0" y="50.5" width="50" height="30"/>
+                                        <state key="normal" title="SignUp"/>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="4b7-pm-xrB" eventType="touchUpInside" id="Lla-xs-QcF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -176,7 +187,104 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1U-76-6gX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130" y="513"/>
+            <point key="canvasLocation" x="-362" y="863"/>
+        </scene>
+        <!--Sign Up Controller-->
+        <scene sceneID="7NM-Of-EvG">
+            <objects>
+                <viewController storyboardIdentifier="SignUpController" id="W4Z-Bi-DNe" customClass="SignUpController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dCA-TZ-moG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eqM-Jo-uzr">
+                                <rect key="frame" x="115.5" y="373.5" width="183.5" height="149"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignUp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKq-6M-XCK">
+                                        <rect key="frame" x="63.5" y="0.0" width="56" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iq7-dJ-HXC">
+                                        <rect key="frame" x="66.5" y="36.5" width="50" height="30"/>
+                                        <state key="normal" title="SignUp"/>
+                                        <connections>
+                                            <action selector="signUpClicked:" destination="W4Z-Bi-DNe" eventType="touchUpInside" id="HC5-25-5Ix"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvG-2K-ZZ9">
+                                        <rect key="frame" x="70" y="82.5" width="43" height="30"/>
+                                        <state key="normal" title="Terms"/>
+                                        <connections>
+                                            <action selector="termsButtonClicked:" destination="W4Z-Bi-DNe" eventType="touchUpInside" id="vDB-rB-MRF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of the agreement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWI-bb-i5L">
+                                        <rect key="frame" x="0.0" y="128.5" width="183.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eqM-Jo-uzr" firstAttribute="centerY" secondItem="dCA-TZ-moG" secondAttribute="centerY" id="EsD-w9-ozL"/>
+                            <constraint firstItem="eqM-Jo-uzr" firstAttribute="centerX" secondItem="dCA-TZ-moG" secondAttribute="centerX" id="VBC-ZT-VHx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YNJ-kt-NV3"/>
+                    </view>
+                    <connections>
+                        <outlet property="signUpButton" destination="Iq7-dJ-HXC" id="OYk-jK-gy6"/>
+                        <outlet property="termsLabel" destination="cWI-bb-i5L" id="U3d-rv-Hcf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16Z-dZ-VTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="863"/>
+        </scene>
+        <!--Terms Controller-->
+        <scene sceneID="1A7-zd-XlW">
+            <objects>
+                <viewController storyboardIdentifier="TermsController" id="njy-0h-seA" customClass="TermsController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JHD-0u-5rZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Fxb-88-h5j">
+                                <rect key="frame" x="150.5" y="407.5" width="113" height="81.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkX-8n-iHk">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XL2-gc-9GA">
+                                        <rect key="frame" x="32" y="50.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="termsSwitchValueChanged:" destination="njy-0h-seA" eventType="valueChanged" id="nkq-hm-M8B"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fxb-88-h5j" firstAttribute="centerX" secondItem="JHD-0u-5rZ" secondAttribute="centerX" id="1JU-nB-6lo"/>
+                            <constraint firstItem="Fxb-88-h5j" firstAttribute="centerY" secondItem="JHD-0u-5rZ" secondAttribute="centerY" id="74E-PF-V55"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0xO-X7-1G7"/>
+                    </view>
+                    <connections>
+                        <outlet property="termsSwitch" destination="XL2-gc-9GA" id="fgu-Eq-yF1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2QJ-f5-Wcf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="863"/>
         </scene>
     </scenes>
 </document>
