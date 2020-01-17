@@ -15,6 +15,7 @@
 		0D406BAF23D0B9A600A23994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D406BAD23D0B9A600A23994 /* LaunchScreen.storyboard */; };
 		0D406BBA23D0BA1200A23994 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D406BB923D0BA1200A23994 /* Product.swift */; };
 		0D406BBC23D0BAB400A23994 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D406BBB23D0BAB400A23994 /* ProductViewModel.swift */; };
+		0DD17F8923D1D62500C74048 /* UITextField+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD17F8823D1D62500C74048 /* UITextField+Combine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0D406BB023D0B9A600A23994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D406BB923D0BA1200A23994 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0D406BBB23D0BAB400A23994 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		0DD17F8823D1D62500C74048 /* UITextField+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Combine.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				0D406BB823D0B9BC00A23994 /* Model */,
 				0D406BB723D0B9B600A23994 /* View Model */,
 				0D406BB623D0B9B100A23994 /* View */,
+				0DD17F8723D1D61200C74048 /* Extensions */,
 				0D406BA823D0B9A500A23994 /* Main.storyboard */,
 				0D406BAB23D0B9A600A23994 /* Assets.xcassets */,
 				0D406BAD23D0B9A600A23994 /* LaunchScreen.storyboard */,
@@ -95,6 +98,14 @@
 				0D406BB923D0BA1200A23994 /* Product.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0DD17F8723D1D61200C74048 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0DD17F8823D1D62500C74048 /* UITextField+Combine.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 				0D406BA323D0B9A500A23994 /* AppDelegate.swift in Sources */,
 				0D406BA523D0B9A500A23994 /* SceneDelegate.swift in Sources */,
 				0D406BBC23D0BAB400A23994 /* ProductViewModel.swift in Sources */,
+				0DD17F8923D1D62500C74048 /* UITextField+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

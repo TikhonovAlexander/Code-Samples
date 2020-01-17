@@ -15,21 +15,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="5gr-ND-LAy">
-                                <rect key="frame" x="163" y="406.5" width="88" height="83"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5gr-ND-LAy">
+                                <rect key="frame" x="163" y="371.5" width="88" height="153"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI6-dR-eE0">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Un9-vA-tNb">
-                                        <rect key="frame" x="0.0" y="62.5" width="88" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="36.5" width="88" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZJ-yh-ncM">
+                                        <rect key="frame" x="0.0" y="73" width="88" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brk-ud-Ivw">
+                                        <rect key="frame" x="0.0" y="123" width="88" height="30"/>
+                                        <state key="normal" title="Update"/>
+                                        <connections>
+                                            <action selector="updateButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oeA-j9-MAl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -42,6 +54,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="Un9-vA-tNb" id="3iX-zl-ZWS"/>
+                        <outlet property="descriptionTextField" destination="LZJ-yh-ncM" id="7eC-hd-eg5"/>
                         <outlet property="nameLabel" destination="hI6-dR-eE0" id="DVN-dy-qQt"/>
                     </connections>
                 </viewController>

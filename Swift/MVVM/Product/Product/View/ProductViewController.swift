@@ -13,6 +13,7 @@ class ProductViewController: UIViewController {
 
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var descriptionTextField: UITextField!
 
     var productViewModel: ProductViewModel!
     
@@ -29,8 +30,23 @@ class ProductViewController: UIViewController {
     }
 
     private func bind() {
-        productViewModel.nameSubject.assign(to: \.text, on: nameLabel).store(in: &subscriptions)
-        productViewModel.descriptionSubject.assign(to: \.text, on: descriptionLabel).store(in: &subscriptions)
+        
+        // bind view model to view
+        productViewModel.$name.assign(to: \.text, on: nameLabel).store(in: &subscriptions)
+        productViewModel.$description.assign(to: \.text, on: descriptionLabel).store(in: &subscriptions)
+        productViewModel.$descriptionText.assign(to: \.text, on: descriptionTextField).store(in: &subscriptions)
+        
+        // bind view to view model
+        descriptionTextField
+            .textPublisher
+            .map { $0 as String? }
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.descriptionText, on: productViewModel)
+            .store(in: &subscriptions)
+    }
+    
+    @IBAction func updateButtonTouchUpInside(_ sender: UIButton) {
+        productViewModel.updateAction.send()
     }
 
 }
