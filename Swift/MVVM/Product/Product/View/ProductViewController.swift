@@ -21,11 +21,6 @@ class ProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //
-        let product = Product(name: "Coca-Cola", description: "Energy drink")
-        productViewModel = ProductViewModel(product: product)
-        //
         bind()
     }
 
@@ -39,7 +34,6 @@ class ProductViewController: UIViewController {
         // bind view to view model
         descriptionTextField
             .textPublisher
-            .map { $0 as String? }
             .receive(on: DispatchQueue.main)
             .assign(to: \.descriptionText, on: productViewModel)
             .store(in: &subscriptions)
