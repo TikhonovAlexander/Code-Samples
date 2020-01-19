@@ -15,6 +15,11 @@ class ProductViewModel {
     @Published var description: String?
     @Published var descriptionText: String?
     
+    lazy var updateAvailable = $descriptionText
+        .replaceNil(with: "")
+        .map { !$0.isEmpty }
+        .eraseToAnyPublisher()
+    
     var updateAction = PassthroughSubject<Void, Never>()
     
     private var product: Product
@@ -32,18 +37,15 @@ class ProductViewModel {
     }
     
     func updateValue() {
-        print(#function)
         name = product.name
-        let text: String = descriptionText ?? " "
-        description = product.description + "  " + text
+        description = product.description
         descriptionText = ""
     }
     
     func updateProduct() {
-        print(#function)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-            let newProduct = Product(name: "Pepsi", description: "Gesund getrank")
-            self?.product = newProduct
+        let descriptionText = self.descriptionText ?? "-"
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.product.description = descriptionText
             self?.updateValue()
         }
     }

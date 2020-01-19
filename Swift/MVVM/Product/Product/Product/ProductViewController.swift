@@ -14,6 +14,7 @@ class ProductViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var descriptionTextField: UITextField!
+    @IBOutlet var updateButton: UIButton!
 
     var productViewModel: ProductViewModel!
     
@@ -30,6 +31,7 @@ class ProductViewController: UIViewController {
         productViewModel.$name.assign(to: \.text, on: nameLabel).store(in: &subscriptions)
         productViewModel.$description.assign(to: \.text, on: descriptionLabel).store(in: &subscriptions)
         productViewModel.$descriptionText.assign(to: \.text, on: descriptionTextField).store(in: &subscriptions)
+        productViewModel.updateAvailable.assign(to: \.isEnabled, on: updateButton).store(in: &subscriptions)
         
         // bind view to view model
         descriptionTextField
@@ -37,6 +39,7 @@ class ProductViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .assign(to: \.descriptionText, on: productViewModel)
             .store(in: &subscriptions)
+        
     }
     
     @IBAction func updateButtonTouchUpInside(_ sender: UIButton) {

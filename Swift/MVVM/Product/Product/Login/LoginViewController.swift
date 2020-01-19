@@ -25,9 +25,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
-        let vc = storyboard!.instantiateViewController(identifier: "ProductViewController") as! ProductViewController
-        let product = Product(name: "Coca-Cola", description: "Energy drink")
-        vc.productViewModel = ProductViewModel(product: product)
+        let vc = storyboard!.instantiateViewController(identifier: "ProductsViewController") as! ProductsViewController
+        vc.productsViewModel = ProductsViewModel(products: feedProducts())
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -43,7 +42,6 @@ class LoginViewController: UIViewController {
             .store(in: &subscriptions)
         
         // bind view model to view
-        
         loginViewModel
             .$username
             .assign(to: \.text, on: usernameTextField)
