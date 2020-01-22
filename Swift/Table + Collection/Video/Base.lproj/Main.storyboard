@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5es-Lj-S4M">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="pZn-6b-Fbi">
+            <objects>
+                <tableViewController id="H9H-Om-2Mn" customClass="TableViewController" customModule="Video" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qNE-ca-3bE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="6c8-aB-H1K" customClass="TableViewCell" customModule="Video" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6c8-aB-H1K" id="0sk-VJ-glo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H9H-Om-2Mn" id="DOF-RG-cOB"/>
+                            <outlet property="delegate" destination="H9H-Om-2Mn" id="j55-oj-0RC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="oJJ-Wq-B5y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a6T-Pt-KNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018.840579710145" y="134.59821428571428"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="sMM-uX-vtz">
+            <objects>
+                <collectionViewController storyboardIdentifier="CollectionViewController" id="Bvk-uN-i7a" customClass="CollectionViewController" customModule="Video" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="k6E-eS-7uS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewLayout key="collectionViewLayout" id="3fe-rt-SHF" customClass="OneLineLayout" customModule="Video" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="4QX-7T-xtK" customClass="CollectionViewCell" customModule="Video" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="185" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pay-C2-xtl">
+                                    <rect key="frame" x="0.0" y="0.0" width="185" height="182"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ggw-g0-rtD">
+                                            <rect key="frame" x="0.0" y="0.0" width="185" height="182"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Ggw-g0-rtD" firstAttribute="top" secondItem="Pay-C2-xtl" secondAttribute="top" id="305-aP-X9C"/>
+                                        <constraint firstItem="Ggw-g0-rtD" firstAttribute="leading" secondItem="Pay-C2-xtl" secondAttribute="leading" id="Mf7-A4-EIh"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ggw-g0-rtD" secondAttribute="bottom" id="cng-If-1LR"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ggw-g0-rtD" secondAttribute="trailing" id="iEA-P0-aQs"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="185" height="182"/>
+                                <connections>
+                                    <outlet property="videoImageView" destination="Ggw-g0-rtD" id="x5B-f3-K9m"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Bvk-uN-i7a" id="ZAE-xy-1fD"/>
+                            <outlet property="delegate" destination="Bvk-uN-i7a" id="9yZ-jo-N6j"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkh-xa-AuD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.7971014492755" y="142.63392857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fvm-IJ-gjI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5es-Lj-S4M" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Kt-2F-E0s">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="H9H-Om-2Mn" kind="relationship" relationship="rootViewController" id="E3y-z0-e9r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNF-qc-bDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108.69565217391305" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+</document>
