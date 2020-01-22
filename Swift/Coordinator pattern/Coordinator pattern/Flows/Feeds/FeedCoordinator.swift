@@ -12,10 +12,12 @@ final class FeedCoordinator: BaseCoordinator {
     
     var router: Router
     var factory: FeedsModuleFactory
+    var coordinatorFactory: CoordinatorFactory
     
-    init(router: Router, factory: FeedsModuleFactory) {
+    init(router: Router, factory: FeedsModuleFactory, coordinatorFactory: CoordinatorFactory) {
         self.router = router
         self.factory = factory
+        self.coordinatorFactory = coordinatorFactory
     }
     
     override func start() {
@@ -39,6 +41,6 @@ final class FeedCoordinator: BaseCoordinator {
     }
     
     private func showCreateFeed() {
-        print(#function)
+//        let coordinator = coordinatorFactory.
     }
 }

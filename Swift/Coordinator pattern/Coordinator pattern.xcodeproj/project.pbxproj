@@ -33,6 +33,13 @@
 		0D406B7523D085B100A23994 /* OnboardingFinalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D406B7423D085B100A23994 /* OnboardingFinalView.swift */; };
 		0D9F32F723D85764001AA251 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F32F623D85764001AA251 /* Feed.swift */; };
 		0D9F32FC23D85DA1001AA251 /* FeedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F32FB23D85DA1001AA251 /* FeedDetailView.swift */; };
+		0D9F32FE23D86117001AA251 /* FeedCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F32FD23D86117001AA251 /* FeedCreateView.swift */; };
+		0D9F330023D86136001AA251 /* FeedCreateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F32FF23D86136001AA251 /* FeedCreateCoordinator.swift */; };
+		0D9F330223D86177001AA251 /* FeedCreateModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F330123D86177001AA251 /* FeedCreateModuleFactory.swift */; };
+		0D9F330423D8632A001AA251 /* FeedCreateCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F330323D8632A001AA251 /* FeedCreateCoordinatorOutput.swift */; };
+		0D9F330723D8728B001AA251 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F330623D8728B001AA251 /* TabbarController.swift */; };
+		0D9F330923D872E4001AA251 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F330823D872E4001AA251 /* TabbarView.swift */; };
+		0D9F330B23D87301001AA251 /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9F330A23D87301001AA251 /* TabbarCoordinator.swift */; };
 		0DA8C03C23C610A0006B0243 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C03B23C610A0006B0243 /* AppDelegate.swift */; };
 		0DA8C03E23C610A0006B0243 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8C03D23C610A0006B0243 /* SceneDelegate.swift */; };
 		0DA8C04323C610A0006B0243 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA8C04123C610A0006B0243 /* Main.storyboard */; };
@@ -79,6 +86,13 @@
 		0D406B7423D085B100A23994 /* OnboardingFinalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFinalView.swift; sourceTree = "<group>"; };
 		0D9F32F623D85764001AA251 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		0D9F32FB23D85DA1001AA251 /* FeedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailView.swift; sourceTree = "<group>"; };
+		0D9F32FD23D86117001AA251 /* FeedCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCreateView.swift; sourceTree = "<group>"; };
+		0D9F32FF23D86136001AA251 /* FeedCreateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCreateCoordinator.swift; sourceTree = "<group>"; };
+		0D9F330123D86177001AA251 /* FeedCreateModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCreateModuleFactory.swift; sourceTree = "<group>"; };
+		0D9F330323D8632A001AA251 /* FeedCreateCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCreateCoordinatorOutput.swift; sourceTree = "<group>"; };
+		0D9F330623D8728B001AA251 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		0D9F330823D872E4001AA251 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		0D9F330A23D87301001AA251 /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
 		0DA8C03823C610A0006B0243 /* Coordinator pattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coordinator pattern.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA8C03B23C610A0006B0243 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA8C03D23C610A0006B0243 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +160,7 @@
 				0D03BF3723CF7B7400B4CDFF /* AuthModuleFactory.swift */,
 				0D406B6F23D082E200A23994 /* OnboardingModuleFactory.swift */,
 				0D180EB523D84BCC00F192FF /* FeedsModuleFactory.swift */,
+				0D9F330123D86177001AA251 /* FeedCreateModuleFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -258,8 +273,10 @@
 		0D9F32F823D85D6E001AA251 /* FeedCreate */ = {
 			isa = PBXGroup;
 			children = (
+				0D9F32FF23D86136001AA251 /* FeedCreateCoordinator.swift */,
 				0D9F32F923D85D81001AA251 /* Views */,
 				0D9F32FA23D85D87001AA251 /* Controllers */,
+				0D9F330323D8632A001AA251 /* FeedCreateCoordinatorOutput.swift */,
 			);
 			path = FeedCreate;
 			sourceTree = "<group>";
@@ -267,6 +284,7 @@
 		0D9F32F923D85D81001AA251 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0D9F32FD23D86117001AA251 /* FeedCreateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,6 +295,16 @@
 				0DA8C06723C6403F006B0243 /* FeedCreateViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0D9F330523D87262001AA251 /* MainTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				0D9F330823D872E4001AA251 /* TabbarView.swift */,
+				0D9F330A23D87301001AA251 /* TabbarCoordinator.swift */,
+				0D9F330623D8728B001AA251 /* TabbarController.swift */,
+			);
+			path = MainTabbar;
 			sourceTree = "<group>";
 		};
 		0DA8C02F23C610A0006B0243 = {
@@ -321,6 +349,7 @@
 		0DA8C05323C61233006B0243 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				0D9F330523D87262001AA251 /* MainTabbar */,
 				0D03BF3123CF780C00B4CDFF /* Auth */,
 				0D03BF3023CF77E100B4CDFF /* Onboarding */,
 				0D03BF3223CF782300B4CDFF /* Feeds */,
@@ -416,6 +445,7 @@
 				0D180EB623D84BCC00F192FF /* FeedsModuleFactory.swift in Sources */,
 				0DA8C05023C610FF006B0243 /* Coordinator.swift in Sources */,
 				0DA8C05B23C61B4A006B0243 /* FeedsViewController.swift in Sources */,
+				0D9F330423D8632A001AA251 /* FeedCreateCoordinatorOutput.swift in Sources */,
 				0DA8C05223C61188006B0243 /* AppCoordinator.swift in Sources */,
 				0DA8C06423C62D0B006B0243 /* AuthCoordinator.swift in Sources */,
 				0D03BF3C23CF7CA300B4CDFF /* BaseView.swift in Sources */,
@@ -430,17 +460,22 @@
 				0D03BEFA23CF455200B4CDFF /* DeepLinkOption.swift in Sources */,
 				0D03BF4523D06A9A00B4CDFF /* TermsViewController.swift in Sources */,
 				0DA8C06223C62CFF006B0243 /* FeedCoordinator.swift in Sources */,
+				0D9F330923D872E4001AA251 /* TabbarView.swift in Sources */,
 				0D03BF3623CF78A400B4CDFF /* AuthCoordinatorOutput.swift in Sources */,
 				0D03BF0023CF469E00B4CDFF /* Router.swift in Sources */,
 				0DA8C05523C6124F006B0243 /* OnboardingViewController.swift in Sources */,
 				0DA8C06623C62D25006B0243 /* OnboardingCoordinator.swift in Sources */,
 				0D03BF4823D06F9E00B4CDFF /* ModuleFactoryImp.swift in Sources */,
+				0D9F330B23D87301001AA251 /* TabbarCoordinator.swift in Sources */,
+				0D9F330023D86136001AA251 /* FeedCreateCoordinator.swift in Sources */,
 				0D03BF4A23D074FC00B4CDFF /* CoordinatorFactoryImp.swift in Sources */,
 				0DA8C05D23C61B57006B0243 /* FeedDetailViewController.swift in Sources */,
 				0D03BEFE23CF461100B4CDFF /* Presentable.swift in Sources */,
 				0DA8C05923C613AF006B0243 /* Extensions.swift in Sources */,
+				0D9F32FE23D86117001AA251 /* FeedCreateView.swift in Sources */,
 				0D03BF3823CF7B7400B4CDFF /* AuthModuleFactory.swift in Sources */,
 				0D03BF4323D06A8F00B4CDFF /* SignUpViewController.swift in Sources */,
+				0D9F330223D86177001AA251 /* FeedCreateModuleFactory.swift in Sources */,
 				0D03BF3423CF784600B4CDFF /* OnboardingCoordinatorOutput.swift in Sources */,
 				0D9F32FC23D85DA1001AA251 /* FeedDetailView.swift in Sources */,
 				0D180EBB23D84C9D00F192FF /* FeedListView.swift in Sources */,
@@ -448,6 +483,7 @@
 				0D03BF0223CF470000B4CDFF /* RouterImp.swift in Sources */,
 				0D406B7023D082E200A23994 /* OnboardingModuleFactory.swift in Sources */,
 				0D03BEF323CE17A100B4CDFF /* Storage.swift in Sources */,
+				0D9F330723D8728B001AA251 /* TabbarController.swift in Sources */,
 				0D03BEF523CF1EA300B4CDFF /* BaseCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

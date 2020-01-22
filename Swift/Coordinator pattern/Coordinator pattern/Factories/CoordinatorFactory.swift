@@ -6,12 +6,13 @@
 //  Copyright © 2020 atikhonov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CoordinatorFactory {
     
+    func makeTabbarCoordinator() -> (configurator: Coordinator, toPresent: Presentable?)
     func makeOnboardingCoordinator(router: Router) -> Coordinator & OnboardingCoordinatorOutput
     func makeAuthCoordinator(router: Router) -> Coordinator & AuthCoordinatorOutput
-    func makeFeedsCoordinator(router: Router) -> Coordinator
-    
+    func makeFeedsCoordinator(navController: UINavigationController?) -> Coordinator
+    func makeFeedCreateCoordinator(navController: UINavigationController?) -> (configurator: Coordinator & FeedCreateCoordinatorOutput, toPresent: Presentable?)
 }

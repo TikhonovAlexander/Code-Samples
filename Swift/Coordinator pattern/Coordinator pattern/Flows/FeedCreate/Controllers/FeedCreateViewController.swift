@@ -8,12 +8,15 @@
 
 import UIKit
 
-class FeedCreateViewController: UIViewController {
+class FeedCreateViewController: UIViewController, FeedCreateView {
 
+    var onHideButtonTap: (() -> Void)?
+    var onCompleteCreateItem: ((Feed) -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Feed detail 2"
+        title = "Feed Create"
     }
 
     deinit {
@@ -21,6 +24,7 @@ class FeedCreateViewController: UIViewController {
     }
     
     @IBAction func createButtonTapped(_ sender: UIButton) {
-        
+        let feed = Feed(name: "New name", description: "New description")
+        onCompleteCreateItem?(feed)
     }
 }

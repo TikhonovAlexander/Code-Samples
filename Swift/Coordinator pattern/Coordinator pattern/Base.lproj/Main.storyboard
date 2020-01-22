@@ -98,6 +98,39 @@
             </objects>
             <point key="canvasLocation" x="-975.36231884057975" y="10.714285714285714"/>
         </scene>
+        <!--Tabbar Controller-->
+        <scene sceneID="avd-ws-1bo">
+            <objects>
+                <tabBarController storyboardIdentifier="TabbarController" id="4DS-nX-KbC" customClass="TabbarController" customModule="Coordinator_pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G41-P6-Ldf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nju-bQ-DAr" kind="relationship" relationship="viewControllers" id="W5O-ZC-5aM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dj0-sw-XmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1908" y="-1207"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="brB-Xy-vke">
+            <objects>
+                <viewController id="nju-bQ-DAr" customClass="UINavigationController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZKM-O3-Wku">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gtf-6B-Y0y"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" id="HMh-A9-UhH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gnv-ZC-bbw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1077" y="-1513"/>
+        </scene>
         <!--Feeds View Controller-->
         <scene sceneID="BIF-hE-hPe">
             <objects>
@@ -156,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5v-TG-cCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130" y="-213"/>
+            <point key="canvasLocation" x="-151" y="-196"/>
         </scene>
         <!--Feed Detail View Controller-->
         <scene sceneID="Aea-Sg-WEP">

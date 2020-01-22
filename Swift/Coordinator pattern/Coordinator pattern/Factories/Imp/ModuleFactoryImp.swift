@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class ModuleFactoryImp: AuthModuleFactory, OnboardingModuleFactory, FeedsModuleFactory {
+final class ModuleFactoryImp: AuthModuleFactory, OnboardingModuleFactory, FeedsModuleFactory, FeedCreateModuleFactory {
    
     // AuthModuleFactory
     
@@ -44,5 +44,11 @@ final class ModuleFactoryImp: AuthModuleFactory, OnboardingModuleFactory, FeedsM
         let vc = FeedDetailViewController.initiate(for: .main)
         vc.feed = feed
         return vc
+    }
+    
+    // FeedCreateModuleFactory
+    
+    func makeFeedCreateView() -> FeedCreateView {
+        FeedCreateViewController.initiate(for: .main)
     }
 }
