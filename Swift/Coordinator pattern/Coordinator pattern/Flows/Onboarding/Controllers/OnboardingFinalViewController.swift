@@ -18,7 +18,7 @@ class OnboardingFinalViewController: UIViewController, OnboardingFinalView {
     }
 
     deinit {
-        print("OnboardingFinalViewController")
+        print("deinit OnboardingFinalViewController")
     }
     
     @IBAction func finishTapped(_ sender: Any) {

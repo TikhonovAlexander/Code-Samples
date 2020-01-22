@@ -12,5 +12,6 @@ protocol CoordinatorFactory {
     
     func makeOnboardingCoordinator(router: Router) -> Coordinator & OnboardingCoordinatorOutput
     func makeAuthCoordinator(router: Router) -> Coordinator & AuthCoordinatorOutput
+    func makeFeedsCoordinator(router: Router) -> Coordinator
     
 }

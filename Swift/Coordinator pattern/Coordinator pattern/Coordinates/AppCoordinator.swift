@@ -58,6 +58,8 @@ final class AppCoordinator: BaseCoordinator {
     }
     
     private func runMainFlow() {
-        print(#function)
+        let coordinator = coordinatorFactory.makeFeedsCoordinator(router: router)
+        addDependency(coordinator)
+        coordinator.start()
     }
 }

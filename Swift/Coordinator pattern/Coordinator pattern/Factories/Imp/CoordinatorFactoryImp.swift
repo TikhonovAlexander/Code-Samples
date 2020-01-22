@@ -11,12 +11,14 @@ import Foundation
 final class CoordinatorFactoryImp: CoordinatorFactory {
     
     func makeOnboardingCoordinator(router: Router) -> Coordinator & OnboardingCoordinatorOutput {
-        OnboardingCoordinator.init(router: router, factory: ModuleFactoryImp())
+        OnboardingCoordinator(router: router, factory: ModuleFactoryImp())
     }
-    
     
     func makeAuthCoordinator(router: Router) -> Coordinator & AuthCoordinatorOutput {
         AuthCoordinator(router: router, factory: ModuleFactoryImp())
     }
     
+    func makeFeedsCoordinator(router: Router) -> Coordinator {
+        FeedCoordinator(router: router, factory: ModuleFactoryImp())
+    }
 }

@@ -18,7 +18,7 @@ class OnboardingViewController: UIViewController, OnboardingView {
     }
     
     deinit {
-        print("OnboardingViewController")
+        print("deinit OnboardingViewController")
     }
     
     @IBAction func showNextTapped(_ sender: Any) {

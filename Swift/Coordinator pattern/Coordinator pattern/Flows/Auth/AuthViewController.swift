@@ -19,7 +19,7 @@ class AuthViewController: UIViewController, LoginView {
     }
     
     deinit {
-        print("AuthViewController")
+        print("deinit AuthViewController")
     }
     
     @IBAction func loginTapped(_ sender: Any) {

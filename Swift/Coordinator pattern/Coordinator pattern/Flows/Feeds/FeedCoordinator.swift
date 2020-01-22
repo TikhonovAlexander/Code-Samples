@@ -8,34 +8,37 @@
 
 import UIKit
 
-final class FeedCoordinator {
+final class FeedCoordinator: BaseCoordinator {
     
-    var children: [Coordinator] = []
+    var router: Router
+    var factory: FeedsModuleFactory
     
-    var navigationController: UINavigationController
-    weak var window: UIWindow?
-    
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(router: Router, factory: FeedsModuleFactory) {
+        self.router = router
+        self.factory = factory
     }
     
-    convenience init(navigationController: UINavigationController, window: UIWindow? = nil) {
-        self.init(navigationController: navigationController)
-        self.window = window
+    override func start() {
+        showFeedList()
     }
     
-    func start() {
-        let feeds = FeedsViewController.initiate(for: .main)
-        setRootViewController(rootViewController: feeds) { _ in
-            
+    private func showFeedList() {
+        let feedList = factory.makeFeedListView()
+        feedList.onFeedSelect = { [weak self] feed in
+            self?.showFeedSelect(feed: feed)
         }
+        feedList.onCreateFeed = { [weak self] in
+            self?.showCreateFeed()
+        }
+        router.setRootModule(feedList)
     }
     
-    func setRootViewController(rootViewController: UIViewController, completion: ((Bool) -> Void)?) {
-        guard let window = window else { print("window is nil"); return }
-        UIView.transition(with: window, duration: 1.0, options: [.transitionFlipFromLeft, .allowAnimatedContent], animations: {
-            window.rootViewController = rootViewController
-        }, completion: completion)
+    private func showFeedSelect(feed: Feed) {
+        let feedDetail = factory.makeFeedDetailView(feed: feed)
+        router.push(feedDetail)
     }
     
+    private func showCreateFeed() {
+        print(#function)
+    }
 }

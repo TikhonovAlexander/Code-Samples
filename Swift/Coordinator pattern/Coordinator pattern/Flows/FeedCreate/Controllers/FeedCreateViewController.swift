@@ -1,5 +1,5 @@
 //
-//  FeedDetail2ViewController.swift
+//  FeedCreateViewController.swift
 //  Coordinator pattern
 //
 //  Created by atikhonov on 08.01.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedDetail2ViewController: UIViewController {
+class FeedCreateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,10 @@ class FeedDetail2ViewController: UIViewController {
     }
 
     deinit {
-        print("FeedDetail2ViewController")
+        print("deinit FeedCreateViewController")
+    }
+    
+    @IBAction func createButtonTapped(_ sender: UIButton) {
+        
     }
 }

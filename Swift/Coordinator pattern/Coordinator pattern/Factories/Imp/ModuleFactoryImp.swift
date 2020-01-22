@@ -8,9 +8,10 @@
 
 import Foundation
 
-final class ModuleFactoryImp: AuthModuleFactory, OnboardingModuleFactory {
-    
+final class ModuleFactoryImp: AuthModuleFactory, OnboardingModuleFactory, FeedsModuleFactory {
+   
     // AuthModuleFactory
+    
     func makeLoginView() -> LoginView {
         AuthViewController.initiate(for: .main)
     }
@@ -31,5 +32,17 @@ final class ModuleFactoryImp: AuthModuleFactory, OnboardingModuleFactory {
     
     func makeOnboardingFinal() -> OnboardingFinalView {
         OnboardingFinalViewController.initiate(for: .main)
+    }
+    
+    // FeedsModuleFactory
+    
+    func makeFeedListView() -> FeedListView {
+        FeedsViewController.initiate(for: .main)
+    }
+    
+    func makeFeedDetailView(feed: Feed) -> FeedDetailView {
+        let vc = FeedDetailViewController.initiate(for: .main)
+        vc.feed = feed
+        return vc
     }
 }
