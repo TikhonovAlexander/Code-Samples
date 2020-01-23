@@ -1,6 +1,6 @@
 # Ottonova
 
-![Wireframe](https://github.com/TikhonovAlexander/Code-Samples/blob/master/Coding%20tasks/Wireframe.png)
+![Wireframe](https://github.com/TikhonovAlexander/Code-Samples/blob/master/Coding%20tasks/ottonova/Wireframe.png)
 
 You are asked to write a small application. It shouldn’t take you longer than an afternoon to build (3-5 hours). This will allow us to get a better understanding of your general coding skills, as well as your approach to problem-solving.
 Please try to showcase your knowledge of patterns, architecture and clean code, while building a simple and pragmatic solution.
