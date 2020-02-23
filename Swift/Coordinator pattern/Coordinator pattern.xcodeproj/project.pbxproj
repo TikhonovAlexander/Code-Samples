@@ -229,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				0D406B7123D0830A00A23994 /* OnboardingView.swift */,
+				0D406B7423D085B100A23994 /* OnboardingFinalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				0DA8C05423C6124F006B0243 /* OnboardingViewController.swift */,
-				0D406B7423D085B100A23994 /* OnboardingFinalView.swift */,
 				0DA8C05F23C624D9006B0243 /* OnboardingFinalViewController.swift */,
 			);
 			path = Controllers;

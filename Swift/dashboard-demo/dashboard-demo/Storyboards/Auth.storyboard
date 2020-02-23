@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="ltG-Dc-3Sf">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="0dQ-LJ-iRe" customClass="AuthViewController" customModule="dashboard_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dkk-3V-Eyz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nZm-Z7-H5z">
+                                <rect key="frame" x="182" y="408" width="50" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obl-h8-eFO">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPH-4j-GzO">
+                                        <rect key="frame" x="0.0" y="20.5" width="50" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="0dQ-LJ-iRe" eventType="touchUpInside" id="RXO-3k-Qpw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98I-ab-itI">
+                                        <rect key="frame" x="0.0" y="50.5" width="50" height="30"/>
+                                        <state key="normal" title="SignUp"/>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="0dQ-LJ-iRe" eventType="touchUpInside" id="G9Z-5x-gPe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nZm-Z7-H5z" firstAttribute="centerX" secondItem="Dkk-3V-Eyz" secondAttribute="centerX" id="Q08-1U-86G"/>
+                            <constraint firstItem="nZm-Z7-H5z" firstAttribute="centerY" secondItem="Dkk-3V-Eyz" secondAttribute="centerY" id="Smr-Cz-b6v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RFM-CQ-5nw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="clB-Lh-92F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362" y="863"/>
+        </scene>
+        <!--Sign Up Controller-->
+        <scene sceneID="eG9-z4-LL6">
+            <objects>
+                <viewController storyboardIdentifier="SignUpController" id="JDm-Uf-Mjr" customClass="SignUpController" customModule="dashboard_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mN7-zN-680">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NF2-Fm-rPj">
+                                <rect key="frame" x="115.5" y="373.5" width="183.5" height="149"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignUp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jS-R7-fAA">
+                                        <rect key="frame" x="63.5" y="0.0" width="56" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8I-8a-iE3">
+                                        <rect key="frame" x="66.5" y="36.5" width="50" height="30"/>
+                                        <state key="normal" title="SignUp"/>
+                                        <connections>
+                                            <action selector="signUpClicked:" destination="JDm-Uf-Mjr" eventType="touchUpInside" id="twI-LR-ZJC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fu0-oG-YZH">
+                                        <rect key="frame" x="70" y="82.5" width="43" height="30"/>
+                                        <state key="normal" title="Terms"/>
+                                        <connections>
+                                            <action selector="termsButtonClicked:" destination="JDm-Uf-Mjr" eventType="touchUpInside" id="nQt-PN-uOX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of the agreement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBa-vd-p7j">
+                                        <rect key="frame" x="0.0" y="128.5" width="183.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NF2-Fm-rPj" firstAttribute="centerX" secondItem="mN7-zN-680" secondAttribute="centerX" id="MZc-oN-VcM"/>
+                            <constraint firstItem="NF2-Fm-rPj" firstAttribute="centerY" secondItem="mN7-zN-680" secondAttribute="centerY" id="g65-hl-wiW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H0K-qc-fYt"/>
+                    </view>
+                    <connections>
+                        <outlet property="signUpButton" destination="I8I-8a-iE3" id="gly-a0-lWE"/>
+                        <outlet property="termsLabel" destination="YBa-vd-p7j" id="njf-Xr-NTr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P11-Rf-sT0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="863"/>
+        </scene>
+        <!--Terms Controller-->
+        <scene sceneID="W9X-L5-7bI">
+            <objects>
+                <viewController storyboardIdentifier="TermsController" id="Pde-Uc-0Ih" customClass="TermsController" customModule="dashboard_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Osn-rz-UGl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="XdA-1b-ZWH">
+                                <rect key="frame" x="150.5" y="407.5" width="113" height="81.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4d-rF-C4D">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZY1-pk-5Tj">
+                                        <rect key="frame" x="32" y="50.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="termsSwitchValueChanged:" destination="Pde-Uc-0Ih" eventType="valueChanged" id="Upo-j8-1eL"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XdA-1b-ZWH" firstAttribute="centerX" secondItem="Osn-rz-UGl" secondAttribute="centerX" id="e9K-i1-N6X"/>
+                            <constraint firstItem="XdA-1b-ZWH" firstAttribute="centerY" secondItem="Osn-rz-UGl" secondAttribute="centerY" id="qqW-rf-pcy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1vg-6x-hIR"/>
+                    </view>
+                    <connections>
+                        <outlet property="termsSwitch" destination="ZY1-pk-5Tj" id="Knh-V9-FtR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lm3-dx-mec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="863"/>
+        </scene>
+    </scenes>
+</document>

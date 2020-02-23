@@ -1,21 +1,19 @@
 //
-//  Extensions.swift
-//  Coordinator pattern
+//  AppStoryboard.swift
+//  dashboard-demo
 //
-//  Created by atikhonov on 08.01.2020.
+//  Created by atikhonov on 21.02.2020.
 //  Copyright © 2020 atikhonov. All rights reserved.
 //
 
 import UIKit
 
-extension UIViewController {
-    static func initiate(for storyboard: ATAppStoryboard) -> Self {
-        return storyboard.initiate(viewControllerType: self)
-    }
-}
-
-enum ATAppStoryboard: String {
-    case main = "MainEx"
+enum AppStoryboard: String {
+    case main = "Main"
+    case auth = "Auth"
+    case onboarding = "Onboarding"
+    case dashboard = "Dashboard"
+    case settings = "Settings"
     
     var instance: UIStoryboard {
         return UIStoryboard(name: rawValue, bundle: nil)
@@ -26,11 +24,5 @@ enum ATAppStoryboard: String {
         let viewControllerIdentifier = viewControllerType.stringName()
         guard let vc = storyboard.instantiateViewController(withIdentifier: viewControllerIdentifier) as? T else { fatalError("Can't initiate \(viewControllerIdentifier) for \(rawValue) storyboard")}
         return vc
-    }
-}
-
-extension NSObject {
-    static func stringName() -> String {
-        return String(describing: self)
     }
 }
