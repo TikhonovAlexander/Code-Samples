@@ -23,11 +23,13 @@
             </objects>
             <point key="canvasLocation" x="1233.3333333333335" y="160.04464285714286"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Dashboard-->
         <scene sceneID="yxn-Db-z2V">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cCi-37-0Bw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="table" catalog="system" id="Xpb-im-r00"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sr5-h3-pn3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -39,4 +41,7 @@
             <point key="canvasLocation" x="323.1884057971015" y="160.04464285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="table" catalog="system" width="64" height="46"/>
+    </resources>
 </document>

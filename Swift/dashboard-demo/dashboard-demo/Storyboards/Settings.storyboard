@@ -23,11 +23,13 @@
             </objects>
             <point key="canvasLocation" x="1076.8115942028987" y="128.57142857142856"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Settings-->
         <scene sceneID="riW-cO-ufj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qs1-aO-ggK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="tWE-yS-RTb"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uRg-ki-LrH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -39,4 +41,7 @@
             <point key="canvasLocation" x="166.66666666666669" y="128.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
