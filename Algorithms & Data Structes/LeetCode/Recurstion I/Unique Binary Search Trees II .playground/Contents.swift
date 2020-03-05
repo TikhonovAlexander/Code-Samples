@@ -34,20 +34,13 @@ public class TreeNode {
         self.left = nil
         self.right = nil
     }
-    
-    func pr() {
-        left?.pr()
-        print(val)
-        right?.pr()
-    }
 }
 
-// [1, 2, 3, 4, 5, 6]
 class Solution {
     
     func generateTrees(set: Set<Int> ) -> [TreeNode?] {
         
-        guard !set.isEmpty else { return [] }
+        guard !set.isEmpty else { return [nil] }
         if set.count == 1 { return [TreeNode(set.first!)]}
         
         var result: [TreeNode?] = []
@@ -60,24 +53,20 @@ class Solution {
             let gMins = generateTrees(set: mins)
             let gMaxs = generateTrees(set: maxs)
             
-        
-            for r in gMins {
-                let node = TreeNode(element)
-                node.left = r
-                result.append(node)
+            for l in gMins {
+                for r in gMaxs {
+                    let node = TreeNode(element)
+                    node.left = l
+                    node.right = r
+                    result.append(node)
+                }
             }
-
-            for r in gMaxs {
-                let node = TreeNode(element)
-                node.right = r
-                result.append(node)
-            }
- 
         }
         return result
     }
     
     func generateTrees(_ n: Int) -> [TreeNode?] {
+        guard n >= 1 else { return [] }
         var set: Set<Int> = []
         for i in 1...n {
             set.insert(i)
@@ -88,6 +77,3 @@ class Solution {
 
 
 let a = Solution().generateTrees(3)
-for w in a {
-    w?.pr()
-}
