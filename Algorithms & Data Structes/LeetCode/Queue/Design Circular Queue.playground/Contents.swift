@@ -8,24 +8,22 @@ class MyCircularQueue {
     private var pushIndex: Int
     private var popIndex: Int
     
-    // [0, 0, 0, 0]
-    // [1, 0, 0, 0]
-    
     var size: Int {
         return queue.count
     }
+    
     /** Initialize your data structure here. Set the size of the queue to be k. */
     init(_ k: Int) {
         queue = Array(repeating: 0, count: k)
-        pushIndex = 0
-        popIndex = 0
+        pushIndex = -1
+        popIndex = -1
     }
-    // [0, 0, 0]
+    
     /** Insert an element into the circular queue. Return true if the operation is successful. */
     func enQueue(_ value: Int) -> Bool {
-        guard pushIndex - popIndex < size else { return false }
-        queue[pushIndex % size] = value
+        guard !isFull() else { return false }
         pushIndex += 1
+        queue[pushIndex % size] = value
         return true
     }
     
@@ -33,10 +31,6 @@ class MyCircularQueue {
     func deQueue() -> Bool {
         guard !isEmpty() else { return false }
         popIndex += 1
-        if popIndex == pushIndex {
-            popIndex = 0
-            pushIndex = 0
-        }
         return true
     }
     
@@ -45,7 +39,7 @@ class MyCircularQueue {
         guard !isEmpty() else {
             return -1
         }
-        return queue[popIndex % size]
+        return queue[(popIndex + 1) % size]
     }
     
     /** Get the last item from the queue. */
@@ -53,7 +47,7 @@ class MyCircularQueue {
         guard !isEmpty() else {
             return -1
         }
-        return queue[pushIndex - 1 % size]
+        return queue[pushIndex % size]
     }
     
     /** Checks whether the circular queue is empty or not. */
@@ -63,7 +57,7 @@ class MyCircularQueue {
     
     /** Checks whether the circular queue is full or not. */
     func isFull() -> Bool {
-        return !isEmpty()
+        return pushIndex - popIndex == size
     }
 }
 
@@ -72,23 +66,13 @@ class MyCircularQueue {
 
 let k = 3
 
-let a = -1 % 3
 let circularQueue =  MyCircularQueue(3); // set the size to be 3
-circularQueue.enQueue(1);  // return true
-circularQueue.Rear();  // return 3
-circularQueue.Rear();  // return 3
 circularQueue.Front()
-circularQueue.deQueue();  // return true
-circularQueue.deQueue();  // return true
-circularQueue.Rear();
-circularQueue.Front()
-circularQueue.deQueue();  // return true
-circularQueue.enQueue(2);  // return true
-circularQueue.enQueue(3);  // return true
-circularQueue.enQueue(4);  // return false, the queue is full
-circularQueue.Rear();  // return 3
-circularQueue.isFull();  // return true
-
-circularQueue.enQueue(4);  // return true
-circularQueue.Rear();  // return 4
-
+circularQueue.Rear()
+circularQueue.isEmpty()
+circularQueue.isFull()
+circularQueue.deQueue()
+circularQueue.enQueue(1);
+circularQueue.enQueue(2);
+circularQueue.enQueue(3);
+circularQueue.isFull()
