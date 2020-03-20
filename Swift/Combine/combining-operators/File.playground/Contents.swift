@@ -132,7 +132,9 @@ example(of: "switchToLatest") {
 //    taps
 //        .map { _ in getImage() }
 //        .switchToLatest()
-//        .sink(receiveValue: { _ in })
+//        .sink(receiveValue: { image in
+//            print(image)
+//        })
 //        .store(in: &subscriptions)
 //
 //    taps.send()
