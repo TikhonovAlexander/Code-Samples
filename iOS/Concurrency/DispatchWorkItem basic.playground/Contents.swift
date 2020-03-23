@@ -56,3 +56,21 @@ concurrentQueue.async(execute: work3)
 concurrentQueue.asyncAfter(deadline: .now() + 2.4) {
     work3.cancel()
 }
+
+
+sleep(4)
+print("////--------------Notify------------")
+let backgroundWorkItem = DispatchWorkItem {
+    print("background start")
+    sleep(2)
+    print("background end")
+}
+let label: UILabel = UILabel()
+let uiWorkItem = DispatchWorkItem {
+    print("ui start")
+    label.text = "FINISHED"
+    print("ui end")
+}
+let queue = DispatchQueue(label: "Notify", attributes: .concurrent)
+backgroundWorkItem.notify(queue: .main, execute: uiWorkItem)
+queue.async(execute: backgroundWorkItem)
