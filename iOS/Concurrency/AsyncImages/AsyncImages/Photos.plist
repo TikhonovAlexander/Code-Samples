@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>https://apod.nasa.gov/apod/image/1810/airglow_banff_beletsky1082.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/0512/as8-14-2383c75.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/1810/NGC1672_Hubble_1080.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/1810/Comet21P_Hemmerich_960.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/1810/AuroraFrogStalnacke1024.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/1810/Venus_Radu-Mihai_MG_3429_1067px.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/1801/NGC7027_HubbleSchmidt_960.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/1710/NGC6369LittleGhostHST1024c.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/1706/Spirograph_Hubble_960.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/0910/FirstParallelMode_SPIRE_PACS_c900.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/9710/marval1_mgs.jpg</string>
+	<string>https://apod.nasa.gov/apod/image/1312/geminds2013_jcc_960.jpg</string>
+</array>
+</plist>
