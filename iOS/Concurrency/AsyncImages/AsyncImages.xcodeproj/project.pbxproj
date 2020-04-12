@@ -18,6 +18,9 @@
 		6840AD3824423CF70054A075 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6840AD3724423CF70054A075 /* Photos.plist */; };
 		6840AD3A244245E60054A075 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6840AD39244245E60054A075 /* AsyncOperation.swift */; };
 		6840AD3D2442466F0054A075 /* DownloadImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6840AD3C2442466F0054A075 /* DownloadImageOperation.swift */; };
+		68C959AB2443039C000CF2C8 /* TiltShiftFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C959AA2443039C000CF2C8 /* TiltShiftFilter.swift */; };
+		68C959AD24430415000CF2C8 /* TiltShiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C959AC24430415000CF2C8 /* TiltShiftOperation.swift */; };
+		68C959B1244304FE000CF2C8 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C959B0244304FE000CF2C8 /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		6840AD3724423CF70054A075 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		6840AD39244245E60054A075 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		6840AD3C2442466F0054A075 /* DownloadImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageOperation.swift; sourceTree = "<group>"; };
+		68C959AA2443039C000CF2C8 /* TiltShiftFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftFilter.swift; sourceTree = "<group>"; };
+		68C959AC24430415000CF2C8 /* TiltShiftOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftOperation.swift; sourceTree = "<group>"; };
+		68C959B0244304FE000CF2C8 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +75,9 @@
 				6840AD1F244233390054A075 /* AppDelegate.swift */,
 				6840AD21244233390054A075 /* SceneDelegate.swift */,
 				6840AD23244233390054A075 /* ViewController.swift */,
-				6840AD3324423B2B0054A075 /* TableViewController.swift */,
-				6840AD3524423B690054A075 /* ImageCell.swift */,
+				68C959AF244304DE000CF2C8 /* Filter Scene */,
+				68C959AE244304C5000CF2C8 /* Images Table Scene */,
+				68C959A924430370000CF2C8 /* Filter */,
 				6840AD3B244246610054A075 /* Operations */,
 				6840AD3724423CF70054A075 /* Photos.plist */,
 				6840AD25244233390054A075 /* Main.storyboard */,
@@ -86,8 +93,34 @@
 			children = (
 				6840AD39244245E60054A075 /* AsyncOperation.swift */,
 				6840AD3C2442466F0054A075 /* DownloadImageOperation.swift */,
+				68C959AC24430415000CF2C8 /* TiltShiftOperation.swift */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		68C959A924430370000CF2C8 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				68C959AA2443039C000CF2C8 /* TiltShiftFilter.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		68C959AE244304C5000CF2C8 /* Images Table Scene */ = {
+			isa = PBXGroup;
+			children = (
+				6840AD3324423B2B0054A075 /* TableViewController.swift */,
+				6840AD3524423B690054A075 /* ImageCell.swift */,
+			);
+			path = "Images Table Scene";
+			sourceTree = "<group>";
+		};
+		68C959AF244304DE000CF2C8 /* Filter Scene */ = {
+			isa = PBXGroup;
+			children = (
+				68C959B0244304FE000CF2C8 /* FilterViewController.swift */,
+			);
+			path = "Filter Scene";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,12 +196,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6840AD24244233390054A075 /* ViewController.swift in Sources */,
+				68C959AB2443039C000CF2C8 /* TiltShiftFilter.swift in Sources */,
 				6840AD20244233390054A075 /* AppDelegate.swift in Sources */,
 				6840AD22244233390054A075 /* SceneDelegate.swift in Sources */,
+				68C959B1244304FE000CF2C8 /* FilterViewController.swift in Sources */,
 				6840AD3424423B2B0054A075 /* TableViewController.swift in Sources */,
 				6840AD3A244245E60054A075 /* AsyncOperation.swift in Sources */,
 				6840AD3D2442466F0054A075 /* DownloadImageOperation.swift in Sources */,
 				6840AD3624423B690054A075 /* ImageCell.swift in Sources */,
+				68C959AD24430415000CF2C8 /* TiltShiftOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
