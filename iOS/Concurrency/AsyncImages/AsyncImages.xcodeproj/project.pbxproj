@@ -18,9 +18,11 @@
 		6840AD3824423CF70054A075 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6840AD3724423CF70054A075 /* Photos.plist */; };
 		6840AD3A244245E60054A075 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6840AD39244245E60054A075 /* AsyncOperation.swift */; };
 		6840AD3D2442466F0054A075 /* DownloadImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6840AD3C2442466F0054A075 /* DownloadImageOperation.swift */; };
+		68BEEB2B24431683009D0C50 /* CGImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BEEB2A24431683009D0C50 /* CGImage+Extensions.swift */; };
 		68C959AB2443039C000CF2C8 /* TiltShiftFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C959AA2443039C000CF2C8 /* TiltShiftFilter.swift */; };
 		68C959AD24430415000CF2C8 /* TiltShiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C959AC24430415000CF2C8 /* TiltShiftOperation.swift */; };
 		68C959B1244304FE000CF2C8 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C959B0244304FE000CF2C8 /* FilterViewController.swift */; };
+		68C959B3244311F6000CF2C8 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C959B2244311F6000CF2C8 /* ImageProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +39,11 @@
 		6840AD3724423CF70054A075 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		6840AD39244245E60054A075 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		6840AD3C2442466F0054A075 /* DownloadImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageOperation.swift; sourceTree = "<group>"; };
+		68BEEB2A24431683009D0C50 /* CGImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+Extensions.swift"; sourceTree = "<group>"; };
 		68C959AA2443039C000CF2C8 /* TiltShiftFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftFilter.swift; sourceTree = "<group>"; };
 		68C959AC24430415000CF2C8 /* TiltShiftOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftOperation.swift; sourceTree = "<group>"; };
 		68C959B0244304FE000CF2C8 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		68C959B2244311F6000CF2C8 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 				6840AD1F244233390054A075 /* AppDelegate.swift */,
 				6840AD21244233390054A075 /* SceneDelegate.swift */,
 				6840AD23244233390054A075 /* ViewController.swift */,
+				68BEEB2A24431683009D0C50 /* CGImage+Extensions.swift */,
 				68C959AF244304DE000CF2C8 /* Filter Scene */,
 				68C959AE244304C5000CF2C8 /* Images Table Scene */,
 				68C959A924430370000CF2C8 /* Filter */,
@@ -91,6 +96,7 @@
 		6840AD3B244246610054A075 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				68C959B2244311F6000CF2C8 /* ImageProvider.swift */,
 				6840AD39244245E60054A075 /* AsyncOperation.swift */,
 				6840AD3C2442466F0054A075 /* DownloadImageOperation.swift */,
 				68C959AC24430415000CF2C8 /* TiltShiftOperation.swift */,
@@ -196,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6840AD24244233390054A075 /* ViewController.swift in Sources */,
+				68C959B3244311F6000CF2C8 /* ImageProvider.swift in Sources */,
 				68C959AB2443039C000CF2C8 /* TiltShiftFilter.swift in Sources */,
 				6840AD20244233390054A075 /* AppDelegate.swift in Sources */,
 				6840AD22244233390054A075 /* SceneDelegate.swift in Sources */,
@@ -205,6 +212,7 @@
 				6840AD3D2442466F0054A075 /* DownloadImageOperation.swift in Sources */,
 				6840AD3624423B690054A075 /* ImageCell.swift in Sources */,
 				68C959AD24430415000CF2C8 /* TiltShiftOperation.swift in Sources */,
+				68BEEB2B24431683009D0C50 /* CGImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +356,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RJEHPE26WF;
 				INFOPLIST_FILE = AsyncImages/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -356,6 +366,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tikhonov.AsyncImages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,7 +376,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RJEHPE26WF;
 				INFOPLIST_FILE = AsyncImages/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,6 +386,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tikhonov.AsyncImages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

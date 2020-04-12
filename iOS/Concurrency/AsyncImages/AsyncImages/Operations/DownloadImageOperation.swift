@@ -18,7 +18,7 @@ private var sessionManager: URLSession = {
     return sessionManager
 }()
 
-class DownloadImageOperation: AsyncOperation {
+class DownloadImageOperation: AsyncOperation, ImageProvider {
     
     private let url: URL
     private let completion: ImageOperationCompletion

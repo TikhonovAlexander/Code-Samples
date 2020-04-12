@@ -42,21 +42,25 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImageCell
         
         let url = urls[indexPath.row]
-        let op = DownloadImageOperation(url: url)
+        let downloadOperation = DownloadImageOperation(url: url)
+        let tiltOperation = TiltShiftOperation()
+        tiltOperation.addDependency(downloadOperation)
         cell.show(image: nil)
         cell.isLoading = true
-        op.completionBlock = {
-            DispatchQueue.main.async {
-                guard let cell = tableView.cellForRow(at: indexPath) as? ImageCell
-                    else { return }
-                cell.isLoading = false
-                cell.show(image: op.image)
-            }
+        
+        tiltOperation.onImageProcessed = { image in
+            guard let cell = tableView.cellForRow(at: indexPath) as? ImageCell
+                else { return }
+            cell.isLoading = false
+            cell.show(image: image)
         }
         
-        queue.addOperation(op)
-        
+        queue.addOperation(downloadOperation)
+        queue.addOperation(tiltOperation)
         return cell
     }
     
+    deinit {
+        print("deinit TableViewController")
+    }
 }

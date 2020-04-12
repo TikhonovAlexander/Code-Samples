@@ -41,4 +41,8 @@ class FilterViewController: UIViewController {
         
         tilted.image = UIImage(cgImage: cgImage)
     }
+    
+    deinit {
+        print("deinit FilterViewController")
+    }
 }
