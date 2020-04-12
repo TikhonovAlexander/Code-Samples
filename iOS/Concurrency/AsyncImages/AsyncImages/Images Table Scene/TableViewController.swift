@@ -13,11 +13,17 @@ class TableViewController: UITableViewController {
     private var urls: [URL] = []
     private var queue: OperationQueue = OperationQueue()
     
+    private var operations: [IndexPath: [Operation]] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableView.automaticDimension
         populateURLs()
+    }
+    
+    @IBAction func cancelAllTapped() {
+        queue.cancelAllOperations()
     }
     
     private func populateURLs() {
@@ -57,7 +63,15 @@ class TableViewController: UITableViewController {
         
         queue.addOperation(downloadOperation)
         queue.addOperation(tiltOperation)
+        
+        operations[indexPath]?.forEach { $0.cancel() }
+        operations[indexPath] = [tiltOperation, downloadOperation]
+        
         return cell
+    }
+    
+    override func tableView( _ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        operations[indexPath]?.forEach { $0.cancel() }
     }
     
     deinit {

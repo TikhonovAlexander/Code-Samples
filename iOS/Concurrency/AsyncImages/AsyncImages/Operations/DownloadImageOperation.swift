@@ -24,6 +24,7 @@ class DownloadImageOperation: AsyncOperation, ImageProvider {
     private let completion: ImageOperationCompletion
     
     var image: UIImage?
+    var task: URLSessionTask?
     
     init(url: URL, completion: ImageOperationCompletion = nil) {
         self.url = url
@@ -32,10 +33,11 @@ class DownloadImageOperation: AsyncOperation, ImageProvider {
     }
     
     override func main() {
-        sessionManager.dataTask(with: url) { [weak self] data, response, error in
+        task = sessionManager.dataTask(with: url) { [weak self] data, response, error in
             guard let self = self else { return }
             
             defer { self.state = .finished }
+            guard !self.isCancelled else { return }
             
             if let completion = self.completion {
                 completion(data, response, error)
@@ -44,6 +46,11 @@ class DownloadImageOperation: AsyncOperation, ImageProvider {
             guard error == nil, let data = data else { return }
             self.image = UIImage(data: data)
         }
-        .resume()
+        task?.resume()
+    }
+    
+    override func cancel() {
+        super.cancel()
+        task?.cancel()
     }
 }

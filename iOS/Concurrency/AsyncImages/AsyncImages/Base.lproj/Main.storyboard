@@ -157,7 +157,13 @@
                             <outlet property="delegate" destination="HEZ-fG-5ku" id="IYP-2f-gXS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cqq-76-hYJ"/>
+                    <navigationItem key="navigationItem" id="cqq-76-hYJ">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel All" id="nJ2-K5-xTX">
+                            <connections>
+                                <action selector="cancelAllTapped" destination="HEZ-fG-5ku" id="yo6-aI-pQx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnH-Ds-xP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -42,6 +42,7 @@ final class TiltShiftOperation: Operation, ImageProvider {
                 return
         }
         
+        guard !isCancelled else { return }
         let fromRect = CGRect(origin: .zero, size: inputImage.size)
         guard
             let cgImage = TiltShiftOperation.context.createCGImage(output, from: fromRect),
@@ -51,6 +52,7 @@ final class TiltShiftOperation: Operation, ImageProvider {
                 return
         }
         
+        guard !isCancelled else { return }
         outputImage = UIImage(cgImage: rendered)
         
         if let onImageProcessed = onImageProcessed {

@@ -48,6 +48,10 @@ class AsyncOperation: Operation {
     
     /// you need to call .finished in child class
     override func start() {
+        guard !isCancelled else {
+            state = .finished
+            return
+        }
         main()
         state = .executing
     }
