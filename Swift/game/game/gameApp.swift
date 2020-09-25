@@ -11,7 +11,7 @@ import SwiftUI
 struct gameApp: App {
     var body: some Scene {
         WindowGroup {
-            ContainerGameView()
+            ProfileListView(profilesViewModel: ProfilesViewModel())
         }
     }
 }

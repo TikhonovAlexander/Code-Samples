@@ -1,5 +1,5 @@
 //
-//  ContainerGameView.swift
+//  ContainerProfileView.swift
 //  game
 //
 //  Created by Tikhonov, Aleksandr on 23.09.20.
@@ -8,16 +8,18 @@
 import SwiftUI
 import Combine
 
-struct ContainerGameView: View {
+struct ContainerProfileView: View {
 
-    @ObservedObject var profileViewModel = ProfileViewModel()
+    @ObservedObject var profileViewModel: ProfileViewModel
+
+    var profileId: Int
 
     var body: some View {
         ZStack {
             Color.gray
                 .ignoresSafeArea()
             VStack {
-                GameView(profileViewModel: profileViewModel)
+                ProfileView(profileViewModel: profileViewModel)
                 Button.init(action: {
                     self.fetchProfile()
                 }, label: {
@@ -35,7 +37,7 @@ struct ContainerGameView: View {
     }
 
     private func fetchProfile() {
-        profileViewModel.fetchProfile()
+        profileViewModel.fetchProfile(id: profileId)
     }
 
 
@@ -43,6 +45,6 @@ struct ContainerGameView: View {
 
 struct ContainerGameView_Previews: PreviewProvider {
     static var previews: some View {
-        ContainerGameView(profileViewModel: sampleProfileViewModel)
+        ContainerProfileView(profileViewModel: sampleProfileViewModel, profileId: 3)
     }
 }
