@@ -10,6 +10,11 @@
 		510F1703251B72E1002526A5 /* ContainerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1702251B72E1002526A5 /* ContainerProfileView.swift */; };
 		510F1707251B762A002526A5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1706251B762A002526A5 /* Profile.swift */; };
 		510F170A251B77A2002526A5 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1709251B77A2002526A5 /* ProfileService.swift */; };
+		512BBD6725227F460035678C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513EE131251B5FCC009E42BC /* ProfileView.swift */; };
+		512BBD6A25227F5E0035678C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172618A251BA18400445A50 /* ProfileViewModel.swift */; };
+		512BBD6D25227F680035678C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1706251B762A002526A5 /* Profile.swift */; };
+		512BBD7025227F970035678C /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1709251B77A2002526A5 /* ProfileService.swift */; };
+		512BBD732522810F0035678C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513EE124251B5F45009E42BC /* Assets.xcassets */; };
 		513EE121251B5F44009E42BC /* gameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513EE120251B5F44009E42BC /* gameApp.swift */; };
 		513EE125251B5F45009E42BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513EE124251B5F45009E42BC /* Assets.xcassets */; };
 		513EE128251B5F45009E42BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513EE127251B5F45009E42BC /* Preview Assets.xcassets */; };
@@ -17,7 +22,42 @@
 		5146EBEB251E079D000710E9 /* ProfilesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5146EBEA251E079D000710E9 /* ProfilesViewModel.swift */; };
 		516936E6251CE70100A7BEAC /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516936E5251CE70100A7BEAC /* ProfileListView.swift */; };
 		5172618B251BA18400445A50 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172618A251BA18400445A50 /* ProfileViewModel.swift */; };
+		51DB0D912521D86800B39F66 /* MyUIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0D902521D86800B39F66 /* MyUIKitView.swift */; };
+		51DB0D962521D99C00B39F66 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0D952521D99C00B39F66 /* MyView.swift */; };
+		51DB0D9F2521DAF200B39F66 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DB0D9E2521DAF200B39F66 /* WidgetKit.framework */; };
+		51DB0DA12521DAF200B39F66 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DB0DA02521DAF200B39F66 /* SwiftUI.framework */; };
+		51DB0DA42521DAF200B39F66 /* ProfileWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0DA32521DAF200B39F66 /* ProfileWidget.swift */; };
+		51DB0DA62521DAF200B39F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51DB0DA52521DAF200B39F66 /* Assets.xcassets */; };
+		51DB0DAA2521DAF700B39F66 /* ProfileWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 51DB0D9C2521DAF200B39F66 /* ProfileWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		51DB0DB12521DB6C00B39F66 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0D952521D99C00B39F66 /* MyView.swift */; };
+		51DB0DB92521DBC900B39F66 /* MyUIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0D902521D86800B39F66 /* MyUIKitView.swift */; };
+		51DB0DCA2522173C00B39F66 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0DC92522173C00B39F66 /* AppGroup.swift */; };
+		51DB0DCB2522173C00B39F66 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0DC92522173C00B39F66 /* AppGroup.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51DB0DA82521DAF700B39F66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 513EE115251B5F44009E42BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51DB0D9B2521DAF200B39F66;
+			remoteInfo = ProfileWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51DB0DAE2521DAF700B39F66 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				51DB0DAA2521DAF700B39F66 /* ProfileWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		510F1702251B72E1002526A5 /* ContainerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProfileView.swift; sourceTree = "<group>"; };
@@ -32,6 +72,16 @@
 		5146EBEA251E079D000710E9 /* ProfilesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewModel.swift; sourceTree = "<group>"; };
 		516936E5251CE70100A7BEAC /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
 		5172618A251BA18400445A50 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		51DB0D902521D86800B39F66 /* MyUIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUIKitView.swift; sourceTree = "<group>"; };
+		51DB0D952521D99C00B39F66 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		51DB0D9C2521DAF200B39F66 /* ProfileWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ProfileWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		51DB0D9E2521DAF200B39F66 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		51DB0DA02521DAF200B39F66 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		51DB0DA32521DAF200B39F66 /* ProfileWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWidget.swift; sourceTree = "<group>"; };
+		51DB0DA52521DAF200B39F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51DB0DA72521DAF700B39F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51DB0DBC2522157D00B39F66 /* game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = game.entitlements; sourceTree = "<group>"; };
+		51DB0DC92522173C00B39F66 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +92,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51DB0D992521DAF200B39F66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51DB0DA12521DAF200B39F66 /* SwiftUI.framework in Frameworks */,
+				51DB0D9F2521DAF200B39F66 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				513EE11F251B5F44009E42BC /* game */,
+				51DB0DA22521DAF200B39F66 /* ProfileWidget */,
+				51DB0D9D2521DAF200B39F66 /* Frameworks */,
 				513EE11E251B5F44009E42BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				513EE11D251B5F44009E42BC /* game.app */,
+				51DB0D9C2521DAF200B39F66 /* ProfileWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +126,8 @@
 		513EE11F251B5F44009E42BC /* game */ = {
 			isa = PBXGroup;
 			children = (
+				51DB0DBC2522157D00B39F66 /* game.entitlements */,
+				51DB0D8F2521D85700B39F66 /* uikit */,
 				516936E9251CE71100A7BEAC /* Model */,
 				516936EB251CE72B00A7BEAC /* ViewModel */,
 				516936E8251CE70C00A7BEAC /* Views */,
@@ -106,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				510F1709251B77A2002526A5 /* ProfileService.swift */,
+				51DB0DC92522173C00B39F66 /* AppGroup.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -119,6 +184,34 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		51DB0D8F2521D85700B39F66 /* uikit */ = {
+			isa = PBXGroup;
+			children = (
+				51DB0D902521D86800B39F66 /* MyUIKitView.swift */,
+				51DB0D952521D99C00B39F66 /* MyView.swift */,
+			);
+			path = uikit;
+			sourceTree = "<group>";
+		};
+		51DB0D9D2521DAF200B39F66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51DB0D9E2521DAF200B39F66 /* WidgetKit.framework */,
+				51DB0DA02521DAF200B39F66 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51DB0DA22521DAF200B39F66 /* ProfileWidget */ = {
+			isa = PBXGroup;
+			children = (
+				51DB0DA32521DAF200B39F66 /* ProfileWidget.swift */,
+				51DB0DA52521DAF200B39F66 /* Assets.xcassets */,
+				51DB0DA72521DAF700B39F66 /* Info.plist */,
+			);
+			path = ProfileWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,15 +222,34 @@
 				513EE119251B5F44009E42BC /* Sources */,
 				513EE11A251B5F44009E42BC /* Frameworks */,
 				513EE11B251B5F44009E42BC /* Resources */,
+				51DB0DAE2521DAF700B39F66 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				51DB0DA92521DAF700B39F66 /* PBXTargetDependency */,
 			);
 			name = game;
 			productName = game;
 			productReference = 513EE11D251B5F44009E42BC /* game.app */;
 			productType = "com.apple.product-type.application";
+		};
+		51DB0D9B2521DAF200B39F66 /* ProfileWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51DB0DAB2521DAF700B39F66 /* Build configuration list for PBXNativeTarget "ProfileWidgetExtension" */;
+			buildPhases = (
+				51DB0D982521DAF200B39F66 /* Sources */,
+				51DB0D992521DAF200B39F66 /* Frameworks */,
+				51DB0D9A2521DAF200B39F66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProfileWidgetExtension;
+			productName = ProfileWidgetExtension;
+			productReference = 51DB0D9C2521DAF200B39F66 /* ProfileWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -149,6 +261,9 @@
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					513EE11C251B5F44009E42BC = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					51DB0D9B2521DAF200B39F66 = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
@@ -167,6 +282,7 @@
 			projectRoot = "";
 			targets = (
 				513EE11C251B5F44009E42BC /* game */,
+				51DB0D9B2521DAF200B39F66 /* ProfileWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -181,6 +297,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51DB0D9A2521DAF200B39F66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512BBD732522810F0035678C /* Assets.xcassets in Resources */,
+				51DB0DA62521DAF200B39F66 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,9 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DB0DCA2522173C00B39F66 /* AppGroup.swift in Sources */,
 				5172618B251BA18400445A50 /* ProfileViewModel.swift in Sources */,
 				510F1703251B72E1002526A5 /* ContainerProfileView.swift in Sources */,
+				51DB0D962521D99C00B39F66 /* MyView.swift in Sources */,
 				5146EBEB251E079D000710E9 /* ProfilesViewModel.swift in Sources */,
+				51DB0D912521D86800B39F66 /* MyUIKitView.swift in Sources */,
 				510F1707251B762A002526A5 /* Profile.swift in Sources */,
 				513EE132251B5FCC009E42BC /* ProfileView.swift in Sources */,
 				513EE121251B5F44009E42BC /* gameApp.swift in Sources */,
@@ -199,7 +327,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51DB0D982521DAF200B39F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512BBD6A25227F5E0035678C /* ProfileViewModel.swift in Sources */,
+				512BBD7025227F970035678C /* ProfileService.swift in Sources */,
+				51DB0DB12521DB6C00B39F66 /* MyView.swift in Sources */,
+				51DB0DB92521DBC900B39F66 /* MyUIKitView.swift in Sources */,
+				512BBD6D25227F680035678C /* Profile.swift in Sources */,
+				512BBD6725227F460035678C /* ProfileView.swift in Sources */,
+				51DB0DA42521DAF200B39F66 /* ProfileWidget.swift in Sources */,
+				51DB0DCB2522173C00B39F66 /* AppGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51DB0DA92521DAF700B39F66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51DB0D9B2521DAF200B39F66 /* ProfileWidgetExtension */;
+			targetProxy = 51DB0DA82521DAF700B39F66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		513EE12A251B5F45009E42BC /* Debug */ = {
@@ -321,8 +472,10 @@
 		513EE12D251B5F45009E42BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = game/game.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"game/Preview Content\"";
 				DEVELOPMENT_TEAM = WAKP43293M;
@@ -333,7 +486,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sap.game;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sap.gameprofiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,8 +496,10 @@
 		513EE12E251B5F45009E42BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = game/game.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"game/Preview Content\"";
 				DEVELOPMENT_TEAM = WAKP43293M;
@@ -355,8 +510,50 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sap.game;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sap.gameprofiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		51DB0DAC2521DAF700B39F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WAKP43293M;
+				INFOPLIST_FILE = ProfileWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sap.gameprofiles.ProfileWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51DB0DAD2521DAF700B39F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WAKP43293M;
+				INFOPLIST_FILE = ProfileWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sap.gameprofiles.ProfileWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,6 +576,15 @@
 			buildConfigurations = (
 				513EE12D251B5F45009E42BC /* Debug */,
 				513EE12E251B5F45009E42BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51DB0DAB2521DAF700B39F66 /* Build configuration list for PBXNativeTarget "ProfileWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51DB0DAC2521DAF700B39F66 /* Debug */,
+				51DB0DAD2521DAF700B39F66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

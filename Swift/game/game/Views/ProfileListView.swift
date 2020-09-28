@@ -19,14 +19,7 @@ struct ProfileListView: View {
                 }
             }
             .navigationBarTitle(Text("Profiles"))
-            .onAppear {
-                fetchProfiles()
-            }
         }
-    }
-
-    private func fetchProfiles() {
-        profilesViewModel.fetchProfiles()
     }
 }
 

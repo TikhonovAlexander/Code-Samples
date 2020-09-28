@@ -16,6 +16,10 @@ class ProfilesViewModel: ObservableObject  {
 
     private var cancellable: Set<AnyCancellable> = []
 
+    init() {
+        fetchProfiles()
+    }
+
     func fetchProfiles() {
         service
             .fetchProfiles()
