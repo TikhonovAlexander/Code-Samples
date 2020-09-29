@@ -15,6 +15,15 @@
 		512BBD6D25227F680035678C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1706251B762A002526A5 /* Profile.swift */; };
 		512BBD7025227F970035678C /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1709251B77A2002526A5 /* ProfileService.swift */; };
 		512BBD732522810F0035678C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513EE124251B5F45009E42BC /* Assets.xcassets */; };
+		512BBD7B252322660035678C /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516936E5251CE70100A7BEAC /* ProfileListView.swift */; };
+		512BBD7E252322780035678C /* ProfilesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5146EBEA251E079D000710E9 /* ProfilesViewModel.swift */; };
+		512BBD812523229B0035678C /* ContainerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1702251B72E1002526A5 /* ContainerProfileView.swift */; };
+		512BBD85252324170035678C /* ProfileListWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512BBD84252324170035678C /* ProfileListWidgetView.swift */; };
+		512BBD88252324780035678C /* ProfileListWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512BBD84252324170035678C /* ProfileListWidgetView.swift */; };
+		512BBD8C252327A70035678C /* ProfileSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 512BBD8B252327A70035678C /* ProfileSelection.intentdefinition */; };
+		512BBD8F252327BE0035678C /* ProfileSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 512BBD8B252327A70035678C /* ProfileSelection.intentdefinition */; };
+		512BBDA325233EFD0035678C /* ProfilesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512BBDA125233EFD0035678C /* ProfilesWidget.swift */; };
+		512BBDAC252341360035678C /* Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512BBDAA252341360035678C /* Widgets.swift */; };
 		513EE121251B5F44009E42BC /* gameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513EE120251B5F44009E42BC /* gameApp.swift */; };
 		513EE125251B5F45009E42BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513EE124251B5F45009E42BC /* Assets.xcassets */; };
 		513EE128251B5F45009E42BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513EE127251B5F45009E42BC /* Preview Assets.xcassets */; };
@@ -63,6 +72,10 @@
 		510F1702251B72E1002526A5 /* ContainerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProfileView.swift; sourceTree = "<group>"; };
 		510F1706251B762A002526A5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		510F1709251B77A2002526A5 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		512BBD84252324170035678C /* ProfileListWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListWidgetView.swift; sourceTree = "<group>"; };
+		512BBD8B252327A70035678C /* ProfileSelection.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ProfileSelection.intentdefinition; sourceTree = "<group>"; };
+		512BBDA125233EFD0035678C /* ProfilesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesWidget.swift; sourceTree = "<group>"; };
+		512BBDAA252341360035678C /* Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgets.swift; sourceTree = "<group>"; };
 		513EE11D251B5F44009E42BC /* game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		513EE120251B5F44009E42BC /* gameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameApp.swift; sourceTree = "<group>"; };
 		513EE124251B5F45009E42BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +167,7 @@
 				516936E5251CE70100A7BEAC /* ProfileListView.swift */,
 				510F1702251B72E1002526A5 /* ContainerProfileView.swift */,
 				513EE131251B5FCC009E42BC /* ProfileView.swift */,
+				512BBD84252324170035678C /* ProfileListWidgetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,9 +219,12 @@
 		51DB0DA22521DAF200B39F66 /* ProfileWidget */ = {
 			isa = PBXGroup;
 			children = (
+				512BBDAA252341360035678C /* Widgets.swift */,
 				51DB0DA32521DAF200B39F66 /* ProfileWidget.swift */,
+				512BBDA125233EFD0035678C /* ProfilesWidget.swift */,
 				51DB0DA52521DAF200B39F66 /* Assets.xcassets */,
 				51DB0DA72521DAF700B39F66 /* Info.plist */,
+				512BBD8B252327A70035678C /* ProfileSelection.intentdefinition */,
 			);
 			path = ProfileWidget;
 			sourceTree = "<group>";
@@ -315,10 +332,12 @@
 			files = (
 				51DB0DCA2522173C00B39F66 /* AppGroup.swift in Sources */,
 				5172618B251BA18400445A50 /* ProfileViewModel.swift in Sources */,
+				512BBD8C252327A70035678C /* ProfileSelection.intentdefinition in Sources */,
 				510F1703251B72E1002526A5 /* ContainerProfileView.swift in Sources */,
 				51DB0D962521D99C00B39F66 /* MyView.swift in Sources */,
 				5146EBEB251E079D000710E9 /* ProfilesViewModel.swift in Sources */,
 				51DB0D912521D86800B39F66 /* MyUIKitView.swift in Sources */,
+				512BBD85252324170035678C /* ProfileListWidgetView.swift in Sources */,
 				510F1707251B762A002526A5 /* Profile.swift in Sources */,
 				513EE132251B5FCC009E42BC /* ProfileView.swift in Sources */,
 				513EE121251B5F44009E42BC /* gameApp.swift in Sources */,
@@ -331,13 +350,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512BBD7E252322780035678C /* ProfilesViewModel.swift in Sources */,
 				512BBD6A25227F5E0035678C /* ProfileViewModel.swift in Sources */,
+				512BBD8F252327BE0035678C /* ProfileSelection.intentdefinition in Sources */,
 				512BBD7025227F970035678C /* ProfileService.swift in Sources */,
 				51DB0DB12521DB6C00B39F66 /* MyView.swift in Sources */,
 				51DB0DB92521DBC900B39F66 /* MyUIKitView.swift in Sources */,
+				512BBD812523229B0035678C /* ContainerProfileView.swift in Sources */,
+				512BBD88252324780035678C /* ProfileListWidgetView.swift in Sources */,
+				512BBD7B252322660035678C /* ProfileListView.swift in Sources */,
 				512BBD6D25227F680035678C /* Profile.swift in Sources */,
 				512BBD6725227F460035678C /* ProfileView.swift in Sources */,
+				512BBDA325233EFD0035678C /* ProfilesWidget.swift in Sources */,
 				51DB0DA42521DAF200B39F66 /* ProfileWidget.swift in Sources */,
+				512BBDAC252341360035678C /* Widgets.swift in Sources */,
 				51DB0DCB2522173C00B39F66 /* AppGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
