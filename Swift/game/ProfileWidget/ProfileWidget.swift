@@ -59,12 +59,13 @@ struct ProfileWidgetEntryView : View {
 
     @ViewBuilder
     var body: some View {
-        switch family {
-        case .systemSmall:
-            ProfileView(profileViewModel: ProfileViewModel(profile: entry.profile), showImage: false)
-        default:
-            ProfileView(profileViewModel: ProfileViewModel(profile: entry.profile))
-        }
+        Text("s")
+//        switch family {
+//        case .systemSmall:
+//            ProfileView(profileId: 2, showImage: false)
+//        default:
+//            ProfileView(profileViewModel: ProfileViewModel(profile: entry.profile))
+//        }
     }
 }
 

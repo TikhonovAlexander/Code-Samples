@@ -10,13 +10,13 @@ import Combine
 
 struct ContainerProfileView: View {
 
-    @ObservedObject var profileViewModel: ProfileViewModel
+    @EnvironmentObject private var store: AppStore
 
-    var profileId: Int
+    let profileId: Int
 
     var body: some View {
         VStack {
-            ProfileView(profileViewModel: profileViewModel)
+            ProfileView(profileId: profileId)
             Button(action: {
                 self.fetchProfile()
             }, label: {
@@ -28,12 +28,14 @@ struct ContainerProfileView: View {
     }
 
     private func fetchProfile() {
-        profileViewModel.fetchProfile(id: profileId)
+        let action = ProfilesActions.FetchProfile(profileId: profileId)
+        store.send(action: .profiles(action: action))
     }
 }
 
 struct ContainerGameView_Previews: PreviewProvider {
     static var previews: some View {
-        ContainerProfileView(profileViewModel: sampleProfileViewModel, profileId: 3)
+        ContainerProfileView(profileId: 1)
+            .environmentObject(sampleStore)
     }
 }

@@ -20,3 +20,12 @@ struct AppState {
     }
     #endif
 }
+
+var sampleAppState: AppState = {
+    var profiles: [Int: Profile] = [:]
+    sampleProfiles.forEach { profile in
+        profiles[profile.id] = profile
+    }
+    let profilesState = ProfilesState(profiles: profiles)
+    return AppState(profilesState: profilesState)
+}()

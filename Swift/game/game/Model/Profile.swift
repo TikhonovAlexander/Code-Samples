@@ -19,6 +19,13 @@ struct Profile {
 extension Profile: Identifiable {} 
 
 var sampleProfile: Profile = {
-    let profile = Profile(id: 3, name: "Lina", rating: 4, score: 602.1, imageName: "lina")
-    return profile
+    Profile(id: 1, name: "Bloodseeker", rating: 6, score: 312.1, imageName: "bloodseeker")
+}()
+
+var sampleProfiles: [Profile] = {
+    let bloodseekerProfile = Profile(id: 1, name: "Bloodseeker", rating: 6, score: 312.1, imageName: "bloodseeker")
+    let morphlingProfile = Profile(id: 2, name: "Morphling", rating: 2, score: 218.8, imageName: "morphling")
+    let linaProfile = Profile(id: 3, name: "Lina", rating: 4, score: 602.1, imageName: "lina")
+
+    return [bloodseekerProfile, morphlingProfile, linaProfile]
 }()

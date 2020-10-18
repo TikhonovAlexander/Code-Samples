@@ -30,4 +30,27 @@ struct ProfilesActions {
         let profiles: [Profile]
     }
 
+    class FetchProfile: ProfileAction {
+
+        deinit {
+            print("deinit FetchProfile")
+        }
+
+        let profileId: Int
+
+        var cancel: Cancellable? = nil
+
+        init(profileId: Int) {
+            self.profileId = profileId
+        }
+
+        func publisher() -> AnyPublisher<Profile, Error> {
+            let service: ProfileService = ProfileService()
+            return service.fetchProfile(for: profileId)
+        }
+    }
+
+    struct SetProfile: ProfileAction {
+        let profile: Profile
+    }
 }

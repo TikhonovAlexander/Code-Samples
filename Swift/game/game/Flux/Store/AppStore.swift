@@ -8,3 +8,7 @@
 import Foundation
 
 typealias AppStore = Store<AppState, AppAction>
+
+var sampleStore: AppStore = {
+    AppStore(state: sampleAppState, reducer: appReducer(state:action:))
+}()

@@ -8,12 +8,11 @@
 import Foundation
 import Combine
 
-func profilesStateReducer(state: inout ProfilesState, action: ProfileAction) -> AnyPublisher<AppAction, Never>? {
+func profilesStateReducer(state: inout ProfilesState, action: ProfileAction) -> AnyPublisher<AppAction, Error>? {
     switch action {
     case let action as ProfilesActions.FetchAllProfiles:
         return action
             .publisher()
-            .replaceError(with: [ ])
             .map { ProfilesActions.SetAllProfiles(profiles: $0) }
             .map { AppAction.profiles(action: $0) }
             .eraseToAnyPublisher()
@@ -21,6 +20,16 @@ func profilesStateReducer(state: inout ProfilesState, action: ProfileAction) -> 
         var profiles: [Int: Profile] = [:]
         action.profiles.forEach { profiles[$0.id] = $0 }
         state.profiles = profiles
+        
+    case let action as ProfilesActions.FetchProfile:
+        return action
+            .publisher()
+            .map { ProfilesActions.SetProfile(profile: $0) }
+            .map { AppAction.profiles(action: $0) }
+            .eraseToAnyPublisher()
+    case let action as ProfilesActions.SetProfile:
+        let profile = action.profile
+        state.profiles[profile.id] = profile
     default:
         fatalError()
     }

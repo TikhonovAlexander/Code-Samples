@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct gameApp: App {
+
+    @StateObject var appStore = AppStore(state: .init(), reducer: appReducer(state:action:))
+
     var body: some Scene {
         WindowGroup {
-            ProfileListView(profilesViewModel: ProfilesViewModel())
+            ProfileListView()
+                .environmentObject(appStore)
         }
     }
 }

@@ -9,14 +9,20 @@ import SwiftUI
 
 struct ProfileView: View {
 
-    @ObservedObject var profileViewModel: ProfileViewModel
+    @EnvironmentObject private var store: AppStore
+
+    let profileId: Int
 
     var showImage: Bool = true
+
+    var profile: Profile {
+        store.state.profilesState.profiles[profileId]!
+    }
 
     var body: some View {
         HStack(alignment: .center, spacing: 4) {
             if showImage {
-                Image(profileViewModel.imageName)
+                Image(profile.imageName)
                     .resizable()
                     .clipShape(Circle())
                     .aspectRatio(contentMode: .fit)
@@ -25,11 +31,11 @@ struct ProfileView: View {
                     .shadow(radius: 10)
             }
             VStack(alignment: .leading) {
-                Text("Name: \(profileViewModel.name)")
+                Text("Name: \(profile.name)")
                     .padding(EdgeInsets(top: 4, leading: 2, bottom: 4, trailing: 2))
-                Text("Rating: \(profileViewModel.rating)")
+                Text("Rating: \(profile.rating)")
                     .padding(EdgeInsets(top: 4, leading: 2, bottom: 4, trailing: 2))
-                Text("Score: \(profileViewModel.score, specifier: "%.1f")")
+                Text("Score: \(profile.score, specifier: "%.1f")")
                     .padding(EdgeInsets(top: 4, leading: 2, bottom: 4, trailing: 2))
             }
         }
@@ -38,6 +44,7 @@ struct ProfileView: View {
 
 struct GameViewView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(profileViewModel: sampleProfileViewModel)
+        ProfileView(profileId: 1)
+            .environmentObject(sampleStore)
     }
 }

@@ -10,14 +10,11 @@
 		510F1703251B72E1002526A5 /* ContainerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1702251B72E1002526A5 /* ContainerProfileView.swift */; };
 		510F1707251B762A002526A5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1706251B762A002526A5 /* Profile.swift */; };
 		510F170A251B77A2002526A5 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1709251B77A2002526A5 /* ProfileService.swift */; };
-		512BBD6725227F460035678C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513EE131251B5FCC009E42BC /* ProfileView.swift */; };
 		512BBD6A25227F5E0035678C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172618A251BA18400445A50 /* ProfileViewModel.swift */; };
 		512BBD6D25227F680035678C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1706251B762A002526A5 /* Profile.swift */; };
 		512BBD7025227F970035678C /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1709251B77A2002526A5 /* ProfileService.swift */; };
 		512BBD732522810F0035678C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513EE124251B5F45009E42BC /* Assets.xcassets */; };
-		512BBD7B252322660035678C /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516936E5251CE70100A7BEAC /* ProfileListView.swift */; };
 		512BBD7E252322780035678C /* ProfilesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5146EBEA251E079D000710E9 /* ProfilesViewModel.swift */; };
-		512BBD812523229B0035678C /* ContainerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1702251B72E1002526A5 /* ContainerProfileView.swift */; };
 		512BBD85252324170035678C /* ProfileListWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512BBD84252324170035678C /* ProfileListWidgetView.swift */; };
 		512BBD88252324780035678C /* ProfileListWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512BBD84252324170035678C /* ProfileListWidgetView.swift */; };
 		512BBD8C252327A70035678C /* ProfileSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 512BBD8B252327A70035678C /* ProfileSelection.intentdefinition */; };
@@ -428,11 +425,8 @@
 				512BBD7025227F970035678C /* ProfileService.swift in Sources */,
 				51DB0DB12521DB6C00B39F66 /* MyView.swift in Sources */,
 				51DB0DB92521DBC900B39F66 /* MyUIKitView.swift in Sources */,
-				512BBD812523229B0035678C /* ContainerProfileView.swift in Sources */,
 				512BBD88252324780035678C /* ProfileListWidgetView.swift in Sources */,
-				512BBD7B252322660035678C /* ProfileListView.swift in Sources */,
 				512BBD6D25227F680035678C /* Profile.swift in Sources */,
-				512BBD6725227F460035678C /* ProfileView.swift in Sources */,
 				512BBDA325233EFD0035678C /* ProfilesWidget.swift in Sources */,
 				51DB0DA42521DAF200B39F66 /* ProfileWidget.swift in Sources */,
 				512BBDAC252341360035678C /* Widgets.swift in Sources */,

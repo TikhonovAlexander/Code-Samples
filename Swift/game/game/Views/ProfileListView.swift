@@ -6,31 +6,39 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ProfileListView: View {
 
-    @ObservedObject var profilesViewModel: ProfilesViewModel
+    @EnvironmentObject private var store: AppStore
+
+    private var profiles: [Profile] {
+        store.state.profilesState.profiles.map { $0.value }
+    }
 
     @ViewBuilder
     var body: some View {
         NavigationView {
-            if profilesViewModel.isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .red))
-            } else {
-                List(profilesViewModel.profiles) { profile in
-                    NavigationLink( destination: ContainerProfileView(profileViewModel: ProfileViewModel(profile: profile), profileId: profile.id)) {
-                        ProfileView(profileViewModel: ProfileViewModel(profile: profile))
-                    }
+            List(profiles) { profile in
+                NavigationLink(destination: ContainerProfileView(profileId: profile.id)) {
+                    ProfileView(profileId: profile.id)
                 }
-                .navigationBarTitle(Text("Profiles"))
             }
+            .navigationBarTitle(Text("Profiles"))
+        }.onAppear {
+            fetchProfiles()
         }
+    }
+
+    private func fetchProfiles() {
+        let action = ProfilesActions.FetchAllProfiles()
+        store.send(action: .profiles(action: action))
     }
 }
 
 struct ProfileListView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileListView(profilesViewModel: sampleProfilesViewModel)
+        ProfileListView()
+            .environmentObject(sampleStore)
     }
 }

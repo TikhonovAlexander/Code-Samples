@@ -23,7 +23,14 @@ class Store<State, Action>: ObservableObject {
         guard let effect = reducer(&state, action) else { return }
         effect
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: send)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    print(error)
+                case .finished:
+                    break
+                }
+            }, receiveValue: send)
             .store(in: &cancellables)
     }
 }
