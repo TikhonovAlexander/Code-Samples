@@ -13,13 +13,6 @@ protocol ProfileAction: Action {}
 struct ProfilesActions {
     
     class FetchAllProfiles: ProfileAction {
-        
-        deinit {
-            print("deinit FetchAllProfiles")
-        }
-        
-        var cancel: Cancellable? = nil
-        
         func publisher() -> AnyPublisher<[Profile], Error> {
             let service: ProfileService = ProfileService()
             return service.fetchProfiles()
@@ -32,13 +25,7 @@ struct ProfilesActions {
 
     class FetchProfile: ProfileAction {
 
-        deinit {
-            print("deinit FetchProfile")
-        }
-
-        let profileId: Int
-
-        var cancel: Cancellable? = nil
+        private let profileId: Int
 
         init(profileId: Int) {
             self.profileId = profileId

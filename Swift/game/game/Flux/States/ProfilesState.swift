@@ -8,8 +8,6 @@
 import Foundation
 
 struct ProfilesState {
-    
     var profiles: [Int: Profile] = [:]
-    
 }
 
