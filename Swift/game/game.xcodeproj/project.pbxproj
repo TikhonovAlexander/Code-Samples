@@ -10,6 +10,13 @@
 		510F1703251B72E1002526A5 /* ContainerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1702251B72E1002526A5 /* ContainerProfileView.swift */; };
 		510F1707251B762A002526A5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1706251B762A002526A5 /* Profile.swift */; };
 		510F170A251B77A2002526A5 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1709251B77A2002526A5 /* ProfileService.swift */; };
+		512451B2253C86B600D5CDCB /* ProfileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512451B1253C86B600D5CDCB /* ProfileProvider.swift */; };
+		512451B8253C86C900D5CDCB /* ProfilePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512451B7253C86C900D5CDCB /* ProfilePlaceholderView.swift */; };
+		512451BC253C86CF00D5CDCB /* ProfileSimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512451BB253C86CF00D5CDCB /* ProfileSimpleEntry.swift */; };
+		512451C0253C86DA00D5CDCB /* ProfileWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512451BF253C86DA00D5CDCB /* ProfileWidgetEntryView.swift */; };
+		512451D2253C923B00D5CDCB /* UnwrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512451D1253C923B00D5CDCB /* UnwrapView.swift */; };
+		512451D8253C933000D5CDCB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513EE131251B5FCC009E42BC /* ProfileView.swift */; };
+		512451DB253C933400D5CDCB /* UnwrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512451D1253C923B00D5CDCB /* UnwrapView.swift */; };
 		512BBD6A25227F5E0035678C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172618A251BA18400445A50 /* ProfileViewModel.swift */; };
 		512BBD6D25227F680035678C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1706251B762A002526A5 /* Profile.swift */; };
 		512BBD7025227F970035678C /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1709251B77A2002526A5 /* ProfileService.swift */; };
@@ -74,6 +81,11 @@
 		510F1702251B72E1002526A5 /* ContainerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProfileView.swift; sourceTree = "<group>"; };
 		510F1706251B762A002526A5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		510F1709251B77A2002526A5 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		512451B1253C86B600D5CDCB /* ProfileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProvider.swift; sourceTree = "<group>"; };
+		512451B7253C86C900D5CDCB /* ProfilePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlaceholderView.swift; sourceTree = "<group>"; };
+		512451BB253C86CF00D5CDCB /* ProfileSimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSimpleEntry.swift; sourceTree = "<group>"; };
+		512451BF253C86DA00D5CDCB /* ProfileWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWidgetEntryView.swift; sourceTree = "<group>"; };
+		512451D1253C923B00D5CDCB /* UnwrapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwrapView.swift; sourceTree = "<group>"; };
 		512BBD84252324170035678C /* ProfileListWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListWidgetView.swift; sourceTree = "<group>"; };
 		512BBD8B252327A70035678C /* ProfileSelection.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ProfileSelection.intentdefinition; sourceTree = "<group>"; };
 		512BBDA125233EFD0035678C /* ProfilesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesWidget.swift; sourceTree = "<group>"; };
@@ -127,6 +139,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		512451AF253C868600D5CDCB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				51DB0DA32521DAF200B39F66 /* ProfileWidget.swift */,
+				512451B1253C86B600D5CDCB /* ProfileProvider.swift */,
+				512451B7253C86C900D5CDCB /* ProfilePlaceholderView.swift */,
+				512451BB253C86CF00D5CDCB /* ProfileSimpleEntry.swift */,
+				512451BF253C86DA00D5CDCB /* ProfileWidgetEntryView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		512451B0253C868B00D5CDCB /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				512BBDA125233EFD0035678C /* ProfilesWidget.swift */,
+			);
+			path = Profiles;
+			sourceTree = "<group>";
+		};
+		512451CF253C921700D5CDCB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				516936E9251CE71100A7BEAC /* Model */,
+				512451D5253C929B00D5CDCB /* View */,
+				512451D0253C922C00D5CDCB /* Helper */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		512451D0253C922C00D5CDCB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				512451D1253C923B00D5CDCB /* UnwrapView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		512451D5253C929B00D5CDCB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				513EE131251B5FCC009E42BC /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		513EE114251B5F44009E42BC = {
 			isa = PBXGroup;
 			children = (
@@ -152,12 +210,12 @@
 				51DB0DBC2522157D00B39F66 /* game.entitlements */,
 				51DB0D8F2521D85700B39F66 /* uikit */,
 				51A8AC7F253C63190015204D /* Flux */,
-				516936E9251CE71100A7BEAC /* Model */,
 				516936EB251CE72B00A7BEAC /* ViewModel */,
 				516936E8251CE70C00A7BEAC /* Views */,
 				516936EA251CE71500A7BEAC /* Services */,
 				513EE120251B5F44009E42BC /* gameApp.swift */,
 				513EE124251B5F45009E42BC /* Assets.xcassets */,
+				512451CF253C921700D5CDCB /* Shared */,
 				513EE129251B5F45009E42BC /* Info.plist */,
 				513EE126251B5F45009E42BC /* Preview Content */,
 			);
@@ -177,7 +235,6 @@
 			children = (
 				516936E5251CE70100A7BEAC /* ProfileListView.swift */,
 				510F1702251B72E1002526A5 /* ContainerProfileView.swift */,
-				513EE131251B5FCC009E42BC /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,8 +335,8 @@
 			children = (
 				512BBD84252324170035678C /* ProfileListWidgetView.swift */,
 				512BBDAA252341360035678C /* Widgets.swift */,
-				51DB0DA32521DAF200B39F66 /* ProfileWidget.swift */,
-				512BBDA125233EFD0035678C /* ProfilesWidget.swift */,
+				512451B0253C868B00D5CDCB /* Profiles */,
+				512451AF253C868600D5CDCB /* Profile */,
 				51DB0DA52521DAF200B39F66 /* Assets.xcassets */,
 				51DB0DA72521DAF700B39F66 /* Info.plist */,
 				512BBD8B252327A70035678C /* ProfileSelection.intentdefinition */,
@@ -395,6 +452,7 @@
 				510F1703251B72E1002526A5 /* ContainerProfileView.swift in Sources */,
 				51DB0D962521D99C00B39F66 /* MyView.swift in Sources */,
 				51DB0D912521D86800B39F66 /* MyUIKitView.swift in Sources */,
+				512451D2253C923B00D5CDCB /* UnwrapView.swift in Sources */,
 				51A8AC94253C63190015204D /* AppActions.swift in Sources */,
 				51A8AC93253C63190015204D /* ProfilesActions.swift in Sources */,
 				510F1707251B762A002526A5 /* Profile.swift in Sources */,
@@ -414,14 +472,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				512BBD7E252322780035678C /* ProfilesViewModel.swift in Sources */,
+				512451DB253C933400D5CDCB /* UnwrapView.swift in Sources */,
 				512BBD6A25227F5E0035678C /* ProfileViewModel.swift in Sources */,
 				512BBD8F252327BE0035678C /* ProfileSelection.intentdefinition in Sources */,
+				512451B2253C86B600D5CDCB /* ProfileProvider.swift in Sources */,
 				512BBD7025227F970035678C /* ProfileService.swift in Sources */,
 				51DB0DB12521DB6C00B39F66 /* MyView.swift in Sources */,
 				51DB0DB92521DBC900B39F66 /* MyUIKitView.swift in Sources */,
 				512BBD88252324780035678C /* ProfileListWidgetView.swift in Sources */,
 				512BBD6D25227F680035678C /* Profile.swift in Sources */,
+				512451D8253C933000D5CDCB /* ProfileView.swift in Sources */,
+				512451C0253C86DA00D5CDCB /* ProfileWidgetEntryView.swift in Sources */,
+				512451BC253C86CF00D5CDCB /* ProfileSimpleEntry.swift in Sources */,
 				512BBDA325233EFD0035678C /* ProfilesWidget.swift in Sources */,
+				512451B8253C86C900D5CDCB /* ProfilePlaceholderView.swift in Sources */,
 				51DB0DA42521DAF200B39F66 /* ProfileWidget.swift in Sources */,
 				512BBDAC252341360035678C /* Widgets.swift in Sources */,
 				51DB0DCB2522173C00B39F66 /* AppGroup.swift in Sources */,

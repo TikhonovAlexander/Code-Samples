@@ -14,9 +14,13 @@ struct ContainerProfileView: View {
 
     let profileId: Int
 
+    private var profile: Profile {
+        store.state.profilesState.profiles[profileId]!
+    }
+    
     var body: some View {
         VStack {
-            ProfileView(profileId: profileId)
+            ProfileView(profile: profile)
             Button(action: {
                 self.fetchProfile()
             }, label: {

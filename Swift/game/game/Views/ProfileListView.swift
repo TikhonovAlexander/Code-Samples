@@ -21,7 +21,7 @@ struct ProfileListView: View {
         NavigationView {
             List(profiles) { profile in
                 NavigationLink(destination: ContainerProfileView(profileId: profile.id)) {
-                    ProfileView(profileId: profile.id)
+                    ProfileView(profile: profile)
                 }
             }
             .navigationBarTitle(Text("Profiles"))
