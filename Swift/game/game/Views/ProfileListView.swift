@@ -11,14 +11,20 @@ struct ProfileListView: View {
 
     @ObservedObject var profilesViewModel: ProfilesViewModel
 
+    @ViewBuilder
     var body: some View {
         NavigationView {
-            List(profilesViewModel.profiles) { profile in
-                NavigationLink( destination: ContainerProfileView(profileViewModel: ProfileViewModel(profile: profile), profileId: profile.id)) {
-                    ProfileView(profileViewModel: ProfileViewModel(profile: profile))
+            if profilesViewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .red))
+            } else {
+                List(profilesViewModel.profiles) { profile in
+                    NavigationLink( destination: ContainerProfileView(profileViewModel: ProfileViewModel(profile: profile), profileId: profile.id)) {
+                        ProfileView(profileViewModel: ProfileViewModel(profile: profile))
+                    }
                 }
+                .navigationBarTitle(Text("Profiles"))
             }
-            .navigationBarTitle(Text("Profiles"))
         }
     }
 }

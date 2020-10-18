@@ -12,6 +12,8 @@ class ProfilesViewModel: ObservableObject  {
 
     @Published var profiles: [Profile] = []
 
+    @Published var isLoading: Bool = false
+
     private let service = ProfileService()
 
     private var cancellable: Set<AnyCancellable> = []
@@ -21,6 +23,7 @@ class ProfilesViewModel: ObservableObject  {
     }
 
     func fetchProfiles() {
+        isLoading = true
         service
             .fetchProfiles()
             .receive(on: DispatchQueue.main)
@@ -28,6 +31,7 @@ class ProfilesViewModel: ObservableObject  {
                 if case .failure(let error) = completion {
                     print(error)
                 }
+                self.isLoading = false
             } receiveValue: { profiles in
                 self.profiles = profiles
             }

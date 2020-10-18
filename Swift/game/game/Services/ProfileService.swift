@@ -7,12 +7,13 @@
 
 import Combine
 import Foundation
+
 class ProfileService {
 
     func fetchProfiles() -> AnyPublisher<[Profile], Error> {
         Future<[Profile], Error> { promise in
             print("fetchProfiles starts")
-            DispatchQueue.global().asyncAfter(deadline: .now() + 1.0) { [self] in
+            DispatchQueue.global().asyncAfter(deadline: .now() + 2.0) { [self] in
                 print("fetchProfiles success")
                 let profile1 = randomProfile(for: 1)
                 let profile2 = randomProfile(for: 2)
