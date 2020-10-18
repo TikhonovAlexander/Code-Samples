@@ -17,7 +17,7 @@ struct ContainerProfileView: View {
     var body: some View {
         VStack {
             ProfileView(profileViewModel: profileViewModel)
-            Button.init(action: {
+            Button(action: {
                 self.fetchProfile()
             }, label: {
                 Text("Update Profile")

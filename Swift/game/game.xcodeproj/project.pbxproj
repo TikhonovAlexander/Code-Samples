@@ -31,6 +31,14 @@
 		5146EBEB251E079D000710E9 /* ProfilesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5146EBEA251E079D000710E9 /* ProfilesViewModel.swift */; };
 		516936E6251CE70100A7BEAC /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516936E5251CE70100A7BEAC /* ProfileListView.swift */; };
 		5172618B251BA18400445A50 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172618A251BA18400445A50 /* ProfileViewModel.swift */; };
+		51A8AC8F253C63190015204D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8AC81253C63190015204D /* AppState.swift */; };
+		51A8AC91253C63190015204D /* ProfilesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8AC83253C63190015204D /* ProfilesState.swift */; };
+		51A8AC93253C63190015204D /* ProfilesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8AC86253C63190015204D /* ProfilesActions.swift */; };
+		51A8AC94253C63190015204D /* AppActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8AC87253C63190015204D /* AppActions.swift */; };
+		51A8AC95253C63190015204D /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8AC89253C63190015204D /* AppReducer.swift */; };
+		51A8AC96253C63190015204D /* ProfilesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8AC8A253C63190015204D /* ProfilesReducer.swift */; };
+		51A8AC98253C63190015204D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8AC8D253C63190015204D /* Store.swift */; };
+		51A8AC99253C63190015204D /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8AC8E253C63190015204D /* AppStore.swift */; };
 		51DB0D912521D86800B39F66 /* MyUIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0D902521D86800B39F66 /* MyUIKitView.swift */; };
 		51DB0D962521D99C00B39F66 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0D952521D99C00B39F66 /* MyView.swift */; };
 		51DB0D9F2521DAF200B39F66 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DB0D9E2521DAF200B39F66 /* WidgetKit.framework */; };
@@ -85,6 +93,14 @@
 		5146EBEA251E079D000710E9 /* ProfilesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewModel.swift; sourceTree = "<group>"; };
 		516936E5251CE70100A7BEAC /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
 		5172618A251BA18400445A50 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		51A8AC81253C63190015204D /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		51A8AC83253C63190015204D /* ProfilesState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesState.swift; sourceTree = "<group>"; };
+		51A8AC86253C63190015204D /* ProfilesActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesActions.swift; sourceTree = "<group>"; };
+		51A8AC87253C63190015204D /* AppActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppActions.swift; sourceTree = "<group>"; };
+		51A8AC89253C63190015204D /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		51A8AC8A253C63190015204D /* ProfilesReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesReducer.swift; sourceTree = "<group>"; };
+		51A8AC8D253C63190015204D /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		51A8AC8E253C63190015204D /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		51DB0D902521D86800B39F66 /* MyUIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUIKitView.swift; sourceTree = "<group>"; };
 		51DB0D952521D99C00B39F66 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		51DB0D9C2521DAF200B39F66 /* ProfileWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ProfileWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +157,7 @@
 			children = (
 				51DB0DBC2522157D00B39F66 /* game.entitlements */,
 				51DB0D8F2521D85700B39F66 /* uikit */,
+				51A8AC7F253C63190015204D /* Flux */,
 				516936E9251CE71100A7BEAC /* Model */,
 				516936EB251CE72B00A7BEAC /* ViewModel */,
 				516936E8251CE70C00A7BEAC /* Views */,
@@ -196,6 +213,53 @@
 				5146EBEA251E079D000710E9 /* ProfilesViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		51A8AC7F253C63190015204D /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+				51A8AC80253C63190015204D /* States */,
+				51A8AC84253C63190015204D /* Actions */,
+				51A8AC88253C63190015204D /* Reducers */,
+				51A8AC8C253C63190015204D /* Store */,
+			);
+			path = Flux;
+			sourceTree = "<group>";
+		};
+		51A8AC80253C63190015204D /* States */ = {
+			isa = PBXGroup;
+			children = (
+				51A8AC81253C63190015204D /* AppState.swift */,
+				51A8AC83253C63190015204D /* ProfilesState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		51A8AC84253C63190015204D /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				51A8AC87253C63190015204D /* AppActions.swift */,
+				51A8AC86253C63190015204D /* ProfilesActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		51A8AC88253C63190015204D /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				51A8AC89253C63190015204D /* AppReducer.swift */,
+				51A8AC8A253C63190015204D /* ProfilesReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		51A8AC8C253C63190015204D /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				51A8AC8D253C63190015204D /* Store.swift */,
+				51A8AC8E253C63190015204D /* AppStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		51DB0D8F2521D85700B39F66 /* uikit */ = {
@@ -332,13 +396,21 @@
 			files = (
 				51DB0DCA2522173C00B39F66 /* AppGroup.swift in Sources */,
 				5172618B251BA18400445A50 /* ProfileViewModel.swift in Sources */,
+				51A8AC96253C63190015204D /* ProfilesReducer.swift in Sources */,
 				512BBD8C252327A70035678C /* ProfileSelection.intentdefinition in Sources */,
+				51A8AC98253C63190015204D /* Store.swift in Sources */,
 				510F1703251B72E1002526A5 /* ContainerProfileView.swift in Sources */,
 				51DB0D962521D99C00B39F66 /* MyView.swift in Sources */,
 				5146EBEB251E079D000710E9 /* ProfilesViewModel.swift in Sources */,
 				51DB0D912521D86800B39F66 /* MyUIKitView.swift in Sources */,
+				51A8AC94253C63190015204D /* AppActions.swift in Sources */,
 				512BBD85252324170035678C /* ProfileListWidgetView.swift in Sources */,
+				51A8AC93253C63190015204D /* ProfilesActions.swift in Sources */,
 				510F1707251B762A002526A5 /* Profile.swift in Sources */,
+				51A8AC99253C63190015204D /* AppStore.swift in Sources */,
+				51A8AC8F253C63190015204D /* AppState.swift in Sources */,
+				51A8AC91253C63190015204D /* ProfilesState.swift in Sources */,
+				51A8AC95253C63190015204D /* AppReducer.swift in Sources */,
 				513EE132251B5FCC009E42BC /* ProfileView.swift in Sources */,
 				513EE121251B5F44009E42BC /* gameApp.swift in Sources */,
 				516936E6251CE70100A7BEAC /* ProfileListView.swift in Sources */,
