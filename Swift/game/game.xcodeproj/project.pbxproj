@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510DE44C253CB2EC0088169F /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510DE44B253CB2EC0088169F /* ProfileInfoView.swift */; };
+		510DE44D253CB2EC0088169F /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510DE44B253CB2EC0088169F /* ProfileInfoView.swift */; };
 		510F1703251B72E1002526A5 /* ContainerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1702251B72E1002526A5 /* ContainerProfileView.swift */; };
 		510F1707251B762A002526A5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1706251B762A002526A5 /* Profile.swift */; };
 		510F170A251B77A2002526A5 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F1709251B77A2002526A5 /* ProfileService.swift */; };
@@ -51,6 +53,13 @@
 		51DB0DB92521DBC900B39F66 /* MyUIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0D902521D86800B39F66 /* MyUIKitView.swift */; };
 		51DB0DCA2522173C00B39F66 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0DC92522173C00B39F66 /* AppGroup.swift */; };
 		51DB0DCB2522173C00B39F66 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB0DC92522173C00B39F66 /* AppGroup.swift */; };
+		51E5AEBF253CCE8E0034AB39 /* ProfilesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5AEBE253CCE8E0034AB39 /* ProfilesProvider.swift */; };
+		51E5AEC3253CCEB70034AB39 /* ProfilesSimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5AEC2253CCEB70034AB39 /* ProfilesSimpleEntry.swift */; };
+		51E5AEC7253CCF180034AB39 /* ProfilesWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5AEC6253CCF180034AB39 /* ProfilesWidgetEntryView.swift */; };
+		51E5AECB253CCFA20034AB39 /* ProfilesPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5AECA253CCFA20034AB39 /* ProfilesPlaceholderView.swift */; };
+		51E5AED3253CD2300034AB39 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5AED2253CD2300034AB39 /* ProfileImageView.swift */; };
+		51E5AED8253CD2AA0034AB39 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5AED2253CD2300034AB39 /* ProfileImageView.swift */; };
+		51E5AEE3253CD5F00034AB39 /* ProfileShortInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5AEE2253CD5F00034AB39 /* ProfileShortInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +87,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		510DE44B253CB2EC0088169F /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
 		510F1702251B72E1002526A5 /* ContainerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProfileView.swift; sourceTree = "<group>"; };
 		510F1706251B762A002526A5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		510F1709251B77A2002526A5 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
@@ -117,6 +127,12 @@
 		51DB0DA72521DAF700B39F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51DB0DBC2522157D00B39F66 /* game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = game.entitlements; sourceTree = "<group>"; };
 		51DB0DC92522173C00B39F66 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		51E5AEBE253CCE8E0034AB39 /* ProfilesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesProvider.swift; sourceTree = "<group>"; };
+		51E5AEC2253CCEB70034AB39 /* ProfilesSimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesSimpleEntry.swift; sourceTree = "<group>"; };
+		51E5AEC6253CCF180034AB39 /* ProfilesWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesWidgetEntryView.swift; sourceTree = "<group>"; };
+		51E5AECA253CCFA20034AB39 /* ProfilesPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesPlaceholderView.swift; sourceTree = "<group>"; };
+		51E5AED2253CD2300034AB39 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		51E5AEE2253CD5F00034AB39 /* ProfileShortInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileShortInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +171,10 @@
 			isa = PBXGroup;
 			children = (
 				512BBDA125233EFD0035678C /* ProfilesWidget.swift */,
+				51E5AEBE253CCE8E0034AB39 /* ProfilesProvider.swift */,
+				51E5AECA253CCFA20034AB39 /* ProfilesPlaceholderView.swift */,
+				51E5AEC2253CCEB70034AB39 /* ProfilesSimpleEntry.swift */,
+				51E5AEC6253CCF180034AB39 /* ProfilesWidgetEntryView.swift */,
 			);
 			path = Profiles;
 			sourceTree = "<group>";
@@ -181,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				513EE131251B5FCC009E42BC /* ProfileView.swift */,
+				51E5AED2253CD2300034AB39 /* ProfileImageView.swift */,
+				510DE44B253CB2EC0088169F /* ProfileInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,7 +355,7 @@
 		51DB0DA22521DAF200B39F66 /* ProfileWidget */ = {
 			isa = PBXGroup;
 			children = (
-				512BBD84252324170035678C /* ProfileListWidgetView.swift */,
+				51E5AEE1253CD5E50034AB39 /* View */,
 				512BBDAA252341360035678C /* Widgets.swift */,
 				512451B0253C868B00D5CDCB /* Profiles */,
 				512451AF253C868600D5CDCB /* Profile */,
@@ -342,6 +364,15 @@
 				512BBD8B252327A70035678C /* ProfileSelection.intentdefinition */,
 			);
 			path = ProfileWidget;
+			sourceTree = "<group>";
+		};
+		51E5AEE1253CD5E50034AB39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				512BBD84252324170035678C /* ProfileListWidgetView.swift */,
+				51E5AEE2253CD5F00034AB39 /* ProfileShortInfoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,6 +480,7 @@
 				51A8AC96253C63190015204D /* ProfilesReducer.swift in Sources */,
 				512BBD8C252327A70035678C /* ProfileSelection.intentdefinition in Sources */,
 				51A8AC98253C63190015204D /* Store.swift in Sources */,
+				510DE44C253CB2EC0088169F /* ProfileInfoView.swift in Sources */,
 				510F1703251B72E1002526A5 /* ContainerProfileView.swift in Sources */,
 				51DB0D962521D99C00B39F66 /* MyView.swift in Sources */,
 				51DB0D912521D86800B39F66 /* MyUIKitView.swift in Sources */,
@@ -459,6 +491,7 @@
 				51A8AC99253C63190015204D /* AppStore.swift in Sources */,
 				51A8AC8F253C63190015204D /* AppState.swift in Sources */,
 				51A8AC91253C63190015204D /* ProfilesState.swift in Sources */,
+				51E5AED3253CD2300034AB39 /* ProfileImageView.swift in Sources */,
 				51A8AC95253C63190015204D /* AppReducer.swift in Sources */,
 				513EE132251B5FCC009E42BC /* ProfileView.swift in Sources */,
 				513EE121251B5F44009E42BC /* gameApp.swift in Sources */,
@@ -471,17 +504,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E5AED8253CD2AA0034AB39 /* ProfileImageView.swift in Sources */,
 				512BBD7E252322780035678C /* ProfilesViewModel.swift in Sources */,
 				512451DB253C933400D5CDCB /* UnwrapView.swift in Sources */,
 				512BBD6A25227F5E0035678C /* ProfileViewModel.swift in Sources */,
 				512BBD8F252327BE0035678C /* ProfileSelection.intentdefinition in Sources */,
+				510DE44D253CB2EC0088169F /* ProfileInfoView.swift in Sources */,
 				512451B2253C86B600D5CDCB /* ProfileProvider.swift in Sources */,
 				512BBD7025227F970035678C /* ProfileService.swift in Sources */,
 				51DB0DB12521DB6C00B39F66 /* MyView.swift in Sources */,
+				51E5AEBF253CCE8E0034AB39 /* ProfilesProvider.swift in Sources */,
+				51E5AEE3253CD5F00034AB39 /* ProfileShortInfoView.swift in Sources */,
+				51E5AEC7253CCF180034AB39 /* ProfilesWidgetEntryView.swift in Sources */,
 				51DB0DB92521DBC900B39F66 /* MyUIKitView.swift in Sources */,
+				51E5AECB253CCFA20034AB39 /* ProfilesPlaceholderView.swift in Sources */,
 				512BBD88252324780035678C /* ProfileListWidgetView.swift in Sources */,
 				512BBD6D25227F680035678C /* Profile.swift in Sources */,
 				512451D8253C933000D5CDCB /* ProfileView.swift in Sources */,
+				51E5AEC3253CCEB70034AB39 /* ProfilesSimpleEntry.swift in Sources */,
 				512451C0253C86DA00D5CDCB /* ProfileWidgetEntryView.swift in Sources */,
 				512451BC253C86CF00D5CDCB /* ProfileSimpleEntry.swift in Sources */,
 				512BBDA325233EFD0035678C /* ProfilesWidget.swift in Sources */,

@@ -16,7 +16,7 @@ struct ProfileWidgetEntryView : View {
     var body: some View {
         switch family {
         case .systemSmall:
-            ProfileView(profile: entry.profile)
+            ProfileInfoView(profile: entry.profile)
         default:
             ProfileView(profile: entry.profile)
         }
