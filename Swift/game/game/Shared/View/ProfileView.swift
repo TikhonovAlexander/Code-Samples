@@ -12,7 +12,7 @@ struct ProfileView: View {
     let profile: Profile
 
     var body: some View {
-        HStack(alignment: .center) {
+        HStack(alignment: .center, spacing: 16.0) {
             ProfileImageView(profile: profile)
             ProfileInfoView(profile: profile)
         }

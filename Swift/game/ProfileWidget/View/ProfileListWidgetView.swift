@@ -15,7 +15,7 @@ struct ProfileListWidgetView: View {
     var body: some View {
         VStack(alignment: .leading) {
             ForEach(profiles) { profile in
-                HStack(alignment: .center) {
+                HStack(alignment: .center, spacing: 16.0) {
                     ProfileImageView(profile: profile)
                     ProfileShortInfoView(profile: profile)
                 }
