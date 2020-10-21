@@ -12,7 +12,7 @@ class KeychainStore {
 
     private static let service = "Service"
     private static let account = "Account"
-    private static let accessGroup = "com.uninova.shareditems"
+    private static let accessGroup = "YOURTEAMID.com.uninova.shareditems"
 
     static func store(_ string: String) {
         let data = Data(string.utf8)
@@ -39,7 +39,8 @@ class KeychainStore {
 
         switch readStatus {
         case errSecSuccess:
-            guard let data = item as? Data else { return nil }
+            guard let dict = item as? [String: Any] else { return nil }
+            guard let data = dict[kSecValueData as String] as? Data else { return nil }
             return String(decoding: data, as: UTF8.self)
         case errSecItemNotFound:
             return nil
@@ -48,7 +49,22 @@ class KeychainStore {
         case let status:
             fatalError("Keychain read failed: \(status.message)")
         }
+    }
 
+    static func roundTrip(_ string: String) -> String? {
+        deleteKey()
+        store(string)
+        return read()
+    }
+
+    static func deleteKey() {
+        let query = [kSecClass: kSecClassGenericPassword,
+                     kSecAttrAccount: account] as [String: Any]
+        switch SecItemDelete(query as CFDictionary) {
+        case errSecItemNotFound, errSecSuccess: break // Okay to ignore
+        case let status:
+            fatalError("Unexpected deletion error: \(status.message)")
+        }
     }
 }
 
