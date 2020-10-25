@@ -23,7 +23,8 @@ class KeychainStore {
                           kSecValueData: data] as [String: Any]
         let addStatus = SecItemAdd(attributes as CFDictionary, nil)
         guard addStatus == errSecSuccess else {
-            fatalError("Unable to store item: \(addStatus.message)")
+            print("Unable to store item: \(addStatus.message)")
+            return
         }
     }
 
@@ -43,9 +44,11 @@ class KeychainStore {
             guard let data = dict[kSecValueData as String] as? Data else { return nil }
             return String(decoding: data, as: UTF8.self)
         case errSecItemNotFound:
+            print("Item not found")
             return nil
         case errSecMissingEntitlement:
-            fatalError()
+            print("Missing entitlement")
+            return nil
         case let status:
             fatalError("Keychain read failed: \(status.message)")
         }
